@@ -215,7 +215,7 @@ body {
         flex-direction: column;
     }
     .hero-logo {
-        max-width: 400px;
+        max-width: 300px;
         height: auto;
         margin-bottom: 2rem;
     }
