@@ -41,6 +41,27 @@ body {
 }
 
 
+/* Estilo personalizado para el dropdown */
+
+.dropdown-menu {
+    background-color: #ffffff;
+    border-radius: 0.5rem;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown-item {
+    color: #313c56;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    transition: background-color 0.2s ease;
+}
+
+.dropdown-item:hover {
+    background-color: #f1f1f1;
+    color: #48587c;
+}
+
+
 /* Estilo base */
 
 .marca-radac {

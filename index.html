@@ -30,14 +30,25 @@
                 </a>
 
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+                    <span class="navbar-toggler-icon"></span>
+                </button>
                 <div class="collapse navbar-collapse" id="menu">
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                         <li class="nav-item"><a class="nav-link" href="#">INICIO</a></li>
                         <li class="nav-item"><a class="nav-link" href="#">NOSOTROS</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">PROYECTOS</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">SERVICIOS</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#servicios">SERVICIOS</a></li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="serviciosDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                PROYECTOS
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="serviciosDropdown">
+                                <li><a class="dropdown-item" href="#diseno">CONSTRUCCIÓN</a></li>
+                                <li><a class="dropdown-item" href="#construccion">REMODELACIÓN</a></li>
+                                <li><a class="dropdown-item" href="#supervision">MANTENIMIENTOS</a></li>
+                                <li><a class="dropdown-item" href="#remodelacion">PROYECTOS ARQUITECTÓNICOS</a></li>
+                            </ul>
+                        </li>
+
                         <li class="nav-item"><a class="nav-link" href="#contacto">CONTACTO</a></li>
                     </ul>
                     <a href="#contacto" class="btn btn-cotizar ms-3">Cotizar</a>
@@ -100,7 +111,7 @@
 
     <!-- SECCIÓN DE SERVICIOS CON FONDO NEGRO -->
     <section class="contenedor-servicios py-1">
-        <div class="container">
+        <div class="container" id="servicios">
 
             <!-- TÍTULO DE LA SECCIÓN -->
             <div class="text-center mb-5">

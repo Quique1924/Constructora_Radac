@@ -111,10 +111,15 @@ body {
     justify-content: center;
 }
 
+.hero-section {
+    background-position: top center;
+    /* ✅ En escritorio, enfoca arriba */
+}
+
 .hero-overlay {
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.45);
+    background: rgba(0, 0, 0, 0.463);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -164,17 +169,17 @@ body {
 
 @media (max-width: 768px) {
     .hero-section {
-        height: 65vh;
+        height: 75vh;
+        background-position: 40% 40%;
+        /* ✅ Centro en móvil */
     }
     .hero-contenedor,
     .hero-content {
         text-align: center;
         margin-top: -3rem;
-        /* 🔼 Subir todo el bloque */
     }
     .hero-title {
         font-size: 4rem;
-        /* Ajustable */
         margin-bottom: 1rem;
         text-align: center;
     }
@@ -187,7 +192,6 @@ body {
         transition: 0.3s ease;
         display: inline-block;
         margin-top: 0.5rem;
-        /* 🔼 Subir el botón */
     }
 }
 
