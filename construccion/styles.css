@@ -1,0 +1,659 @@
+/* Fijar el header */
+
+.header-fixed-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
+    color: #313c56;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+/* COLOR PERSONALIZADO PARA NAVBAR */
+
+.custom-navbar {
+    background-color: #8d8d8e !important;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+
+/* Para evitar que el contenido se esconda debajo del header fijo */
+
+body {
+    padding-top: 84px;
+    /* ajusta según altura total del header */
+}
+
+
+/* NAVBAR */
+
+.navbar .nav-link {
+    color: #ffffff;
+    margin: 0 10px;
+    font-weight: 500;
+}
+
+.navbar .nav-link:hover {
+    color: #48587c;
+}
+
+
+/* Estilo base */
+
+.marca-radac {
+    color: #ffffff;
+    /* color inicial del texto */
+    transition: color 0.3s ease;
+    text-decoration: none;
+}
+
+
+/* Cambia color al pasar el mouse */
+
+.marca-radac:hover {
+    color: #48587c;
+    /* el color que desees al hacer hover */
+}
+
+
+/* Estilo opcional para la palabra "Constructora" */
+
+.marca-light {
+    font-weight: 400;
+    opacity: 0.8;
+}
+
+.btn-cotizar {
+    background-color: #313c56;
+    /* color de fondo personalizado */
+    color: #fff;
+    /* color de texto */
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: 600;
+    border: none;
+    transition: background 0.3s ease;
+}
+
+.btn-cotizar:hover {
+    background-color: #48587c;
+    /* color al pasar el cursor */
+    color: #fff;
+}
+
+@media (max-width: 768px) {
+    .navbar .nav-link {
+        margin: 10px 0;
+        text-align: center;
+    }
+    .custom-navbar {
+        background-color: #8d8d8e !important;
+        padding-top: 25px;
+        padding-bottom: 20px;
+    }
+}
+
+
+/* HERO GENERAL */
+
+.hero-section {
+    position: relative;
+    width: 100%;
+    height: 89.5vh;
+    overflow: hidden;
+}
+
+.hero-contenedor {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 2;
+}
+
+.hero-overlay {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.45);
+    padding-left: 5%;
+    display: flex;
+    align-items: center;
+}
+
+.hero-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+    object-position: center center;
+    z-index: 1;
+}
+
+
+/* FONDOS DINÁMICOS */
+
+.hero-bg,
+.hero-bg-1,
+.hero-bg-2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    transition: opacity 1.5s ease-in-out;
+    z-index: 1;
+    opacity: 0;
+}
+
+
+/* TEXTO Y BOTÓN */
+
+.hero-title {
+    font-size: 5rem;
+    font-weight: 700;
+    line-height: 1.2;
+    text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);
+}
+
+.hero-titleg {
+    font-size: 5rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    color: #3e4c6d;
+}
+
+.hero-subtitle {
+    font-size: 1.2rem;
+    margin-top: 20px;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.4);
+}
+
+.hero-btn {
+    border: 2px solid white;
+    border-radius: 30px;
+    padding: 10px 25px;
+    font-weight: 500;
+    transition: 0.3s ease;
+}
+
+.hero-btn:hover {
+    background: white;
+    color: black;
+}
+
+
+/* RESPONSIVO */
+
+@media (max-width: 768px) {
+    .hero-section {
+        height: 100vh;
+        overflow: hidden;
+        margin: 0;
+        padding: 0;
+    }
+    .hero-video {
+        width: 100%;
+        height: 100vh;
+        object-fit: cover;
+        object-position: top center;
+        background-color: #000;
+    }
+    .hero-overlay {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 2rem 1rem;
+    }
+    .hero-contenedor {
+        width: 100%;
+        height: auto;
+        padding: 0 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .hero-content {
+        padding: 0;
+        margin-top: 1rem;
+        /* ✅ Bajar todo el bloque de texto */
+    }
+    .hero-content img {
+        max-width: 85%;
+        height: auto;
+        margin-top: -10rem;
+        /* ✅ Subir el logo */
+        margin-bottom: 1.5rem;
+    }
+    .hero-title {
+        font-size: 3rem;
+        line-height: 1.3;
+        margin-bottom: 1rem;
+        margin-top: 8rem;
+        color: #ffffff;
+        text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.6);
+    }
+    .hero-subtitle {
+        display: none;
+    }
+    .hero-btn {
+        font-size: 1rem;
+        margin-top: 1rem;
+        padding: 10px 20px;
+        width: auto;
+        border-radius: 25px;
+        color: #ffffff;
+    }
+}
+
+
+/* SECCIÓN PROYECTOS DESTACADOS */
+
+
+/* Contenedor de toda la sección (ocupa ancho completo) */
+
+.full-width-wrapper {
+    width: 100vw;
+    position: relative;
+    padding: 40px 0;
+}
+
+
+/* Carrusel centrado dentro del contenedor */
+
+.carousel-container {
+    max-width: 1140px;
+    /* o el ancho que uses normalmente */
+    margin: 0 auto;
+    position: relative;
+    padding: 0 20px;
+}
+
+
+/* Swiper básico */
+
+.swiper {
+    width: 100%;
+    padding: 20px 0;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.swiper-slide img {
+    width: 100%;
+    max-height: 350px;
+    object-fit: cover;
+}
+
+
+/* Botones - ahora posicionados respecto al contenedor full-width */
+
+.swiper-button-prev,
+.swiper-button-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #000 !important;
+    color: #fff !important;
+    width: 60px !important;
+    height: 40px !important;
+    border-radius: 0 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    box-shadow: none !important;
+    border: none !important;
+    z-index: 10;
+}
+
+
+/* Botón izquierdo */
+
+.swiper-button-prev {
+    left: 0 !important;
+    /* puedes poner -20px si quieres que sobresalga más */
+}
+
+
+/* Botón derecho */
+
+.swiper-button-next {
+    right: 0 !important;
+}
+
+
+/* Flechas */
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+    content: '' !important;
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-top: 2px solid #fff !important;
+    border-right: 2px solid #fff !important;
+}
+
+.swiper-button-prev::after {
+    transform: rotate(-135deg);
+    margin-left: 3px;
+}
+
+.swiper-button-next::after {
+    transform: rotate(45deg);
+    margin-right: 3px;
+}
+
+@media (max-width: 768px) {
+    .full-width-wrapper {
+        width: 97vw;
+        padding: 10px 0;
+        /* menos padding para pantallas pequeñas */
+        overflow-x: hidden;
+        /* previene scroll lateral accidental */
+    }
+    .carousel-container {
+        width: 100%;
+        max-width: 100%;
+        padding: 0 10px;
+        box-sizing: border-box;
+    }
+    .swiper {
+        padding: 10px 0;
+    }
+    .swiper-slide {
+        padding: 0 5px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .swiper-slide img {
+        width: 100%;
+        max-height: 450px;
+        object-fit: cover;
+        border-radius: 10px;
+    }
+    .swiper-slide h5 {
+        font-size: 16px;
+        margin-top: 10px;
+    }
+    .swiper-button-prev,
+    .swiper-button-next {
+        width: 45px !important;
+        height: 35px !important;
+    }
+    .swiper-button-prev {
+        left: -5px !important;
+    }
+    .swiper-button-next {
+        right: -5px !important;
+    }
+    h2 {
+        font-size: 22px;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+}
+
+
+/* SECCIÓN FOOTER */
+
+.footer-dark {
+    background-color: #1e1e1e;
+    padding: 20px 20px;
+    font-family: 'Poppins', sans-serif;
+    color: #ccc;
+    text-align: center;
+    /* CENTRA TODO */
+}
+
+.footer-grid-dark {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    justify-items: center;
+    /* CENTRA CADA COLUMNA */
+}
+
+.footer-item-dark {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* CENTRA CONTENIDO DENTRO DE LA COLUMNA */
+}
+
+
+/* TÍTULO */
+
+.footer-titulo h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 30px;
+    color: #fff;
+}
+
+.footer-titulo span {
+    color: #ffffff;
+}
+
+
+/* MAPA */
+
+.footer-mapa {
+    margin-bottom: 40px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.footer-item-dark h4 {
+    color: #fff;
+    font-size: 0.95rem;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.footer-item-dark p {
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: #aaa;
+}
+
+.footer-link-dark {
+    color: #aaa;
+    font-size: 0.9rem;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-link-dark:hover {
+    color: #ffffff;
+}
+
+.footer-social-dark {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 8px;
+}
+
+.footer-social-dark a {
+    font-size: 1.2rem;
+    color: #aaa;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    transition: transform 0.3s ease, color 0.3s ease;
+    display: inline-block;
+}
+
+.footer-social-dark a:hover {
+    color: #313c56;
+    transform: translateY(-5px);
+}
+
+.footer-credit {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 0.85rem;
+    color: #777;
+    border-top: 1px solid #333;
+    padding-top: 20px;
+}
+
+.footer-btn-dark {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #ffffff;
+    color: #000000;
+    font-weight: 600;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: background 0.3s ease;
+}
+
+.footer-btn-dark:hover {
+    background-color: #313c56;
+    color: #fff;
+}
+
+
+/* WHATSAPP BUTTON */
+
+.whatsapp-float {
+    position: fixed;
+    bottom: 0px;
+    right: 22px;
+    z-index: 2147483647;
+    /* máximo valor posible */
+    width: 70px;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: auto;
+}
+
+.whatsapp-float img.whatsapp-icon {
+    width: 100%;
+    height: 100%;
+    display: block;
+    pointer-events: auto;
+}
+
+@media (max-width: 768px) {
+    .whatsapp-float {
+        bottom: 15px;
+        right: 15px;
+        font-size: 20px;
+        padding: 10px 12px;
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    /* Ajustes generales */
+    body {
+        padding-top: 90px;
+    }
+    /* NAVBAR */
+    .navbar .nav-link {
+        font-size: 1rem;
+        margin: 0 8px;
+    }
+    /* HERO */
+    .hero-title {
+        font-size: 3.5rem;
+    }
+    .hero-titleg {
+        font-size: 4rem;
+    }
+    .hero-subtitle {
+        font-size: 1.1rem;
+    }
+    .hero-btn {
+        font-size: 1rem;
+        padding: 10px 25px;
+    }
+    /* CONÓCENOS */
+    .titulo-fondo {
+        font-size: 4rem;
+        top: -10px;
+    }
+    .subtitulo {
+        font-size: 1.6rem;
+    }
+    .parrafo {
+        font-size: 1.05rem;
+        padding: 0 1rem;
+    }
+    /* SERVICIOS */
+    .contenedor-servicios {
+        height: auto;
+        max-height: none;
+        overflow: visible;
+        padding: 60px 0;
+    }
+    .titulo-servicios {
+        font-size: 3.5rem;
+        text-align: center;
+    }
+    .imagen-wrapper img {
+        height: 320px;
+    }
+    .servicio-texto {
+        font-size: 1.1rem;
+    }
+    /* CONTACTO */
+    .contacto-titulo {
+        font-size: 4rem;
+    }
+    .formulario-contacto input,
+    .formulario-contacto textarea {
+        font-size: 1rem;
+    }
+    /* FOOTER */
+    .footer-grid-dark {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .footer-item-dark h4 {
+        font-size: 1rem;
+    }
+    .footer-item-dark p,
+    .footer-link-dark {
+        font-size: 0.9rem;
+    }
+    .footer-titulo h2 {
+        font-size: 1.8rem;
+    }
+    .footer-credit {
+        font-size: 0.8rem;
+    }
+}
+
+html,
+body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
