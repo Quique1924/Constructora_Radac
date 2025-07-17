@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Constructora RADAC</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Remix Icon -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.min.css" rel="stylesheet" />
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Estilos propios -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <div class="header-fixed-container">
+        <header class="main-header">
+            <nav class="navbar navbar-expand-lg navbar-dark custom-navbar px-4 shadow-sm">
+
+                <a class="navbar-brand fw-bold marca-radac" href="#">
+                    <span class="marca-light">Constructora</span> RADAC
+                </a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+                <div class="collapse navbar-collapse" id="menu">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item"><a class="nav-link" href="#">INICIO</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">NOSOTROS</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">PROYECTOS</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">SERVICIOS</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#contacto">CONTACTO</a></li>
+                    </ul>
+                    <a href="#contacto" class="btn btn-cotizar ms-3">Cotizar</a>
+
+                </div>
+            </nav>
+        </header>
+    </div>
+
+    <!-- HERO SECTION -->
+    <section class="hero-section">
+        <div class="hero-overlay d-flex align-items-center">
+            <div class="hero-contenedor">
+                <div class="container">
+                    <div class="hero-content text-white" data-aos="fade-up">
+                        <h1 class="hero-title">¿QUIERES CONSTRUIR<br>CON CALIDAD?</h1>
+                        <img src="img/LOGO RADAC BLANCO-1.png" alt=""><br><br>
+                        <p class="hero-subtitle">
+                            20 años en el sector de la construcción y el diseño arquitectónico <br>en el estado de TLAXCALA
+                        </p>
+                        <a href="#contacto" class="btn btn-outline-light hero-btn mt-3">
+                            <i class="ri-whatsapp-line"></i> Cotiza tu proyecto ahora
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Dos capas de fondo para el crossfade -->
+        <div class="hero-bg hero-bg-1"></div>
+        <div class="hero-bg hero-bg-2"></div>
+    </section>
+
+    <!-- SECCIÓN CONÓCENOS -->
+    <section class="section-conocenos" id="conocenos">
+        <div class="container"><br>
+            <div class="row align-items-center">
+
+                <!-- Columna de imágenes -->
+                <div class="col-lg-6 columna-imagen" data-aos="fade-right">
+                    <img src="img/años.png" alt="Obra 1"><br><br>
+                </div>
+
+                <!-- Columna de texto -->
+                <div class="col-lg-6 columna-texto" data-aos="fade-left">
+                    <h1 class="titulo-fondo">CONÓCENOS</h1>
+                    <h3 class="subtitulo">Especialistas en construcción privada en Tlaxcala</h3>
+                    <p class="parrafo" style="text-align: justify;"><br> Somos una empresa con más de 20 años en el sector de la construcción, ofreciendo soluciones arquitectónicas integrales para viviendas, comercios y espacios funcionales. Nuestro equipo está conformado por profesionales que trabajan
+                        cada proyecto con compromiso, calidad y atención personalizada.
+                    </p>
+                    <p class="parrafo" style="text-align: justify;">
+                        En RADAC, diseñamos contigo y construimos para ti. Nos enfocamos en cada detalle, desde la planeación hasta la entrega, garantizando acabados excepcionales y resultados que superan expectativas.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN DE SERVICIOS CON FONDO NEGRO -->
+    <section class="contenedor-servicios py-1">
+        <div class="container">
+
+            <!-- TÍTULO DE LA SECCIÓN -->
+            <div class="text-center mb-5">
+                <h2 class="titulo-servicios">NUESTROS SERVICIOS</h2>
+            </div>
+
+            <div class="row text-center justify-content-center">
+                <!-- Servicio 1 -->
+                <div class="col-12 col-sm-6 col-lg-3 mb-5" data-aos="fade-up">
+                    <a href="construccion/index.html" class="servicio-link">
+                        <div class="servicio-box">
+                            <div class="imagen-wrapper">
+                                <img src="img/pro1.jpg" alt="Renders Interiores" class="img-fluid">
+                            </div>
+                            <div class="texto-wrapper">
+                                <div class="servicio-texto">CONSTRUCCIÓN</div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Servicio 2 -->
+                <div class="col-12 col-sm-6 col-lg-3 mb-5" data-aos="fade-down">
+                    <a href="remodelacion/index.html" class="servicio-link">
+                        <div class="servicio-box">
+                            <div class="imagen-wrapper">
+                                <img src="img/pro2.jpg" alt="Renders para Casas" class="img-fluid">
+                            </div>
+                            <div class="texto-wrapper">
+                                <div class="servicio-texto">REMODELACIÓN</div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Servicio 3 -->
+                <div class="col-12 col-sm-6 col-lg-3 mb-5" data-aos="fade-up">
+                    <a href="mantenimientos/index.html" class="servicio-link">
+                        <div class="servicio-box">
+                            <div class="imagen-wrapper">
+                                <img src="img/pro3.jpg" alt="Renders Arquitectónicos" class="img-fluid">
+                            </div>
+                            <div class="texto-wrapper">
+                                <div class="servicio-texto">MANTENIMIENTOS</div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Servicio 4 -->
+                <div class="col-12 col-sm-6 col-lg-3 mb-5" data-aos="fade-down">
+                    <a href="renderizados/index.html" class="servicio-link">
+                        <div class="servicio-box">
+                            <div class="imagen-wrapper">
+                                <img src="img/proyecto6.jpg" alt="Recorridos 3D" class="img-fluid">
+                            </div>
+                            <div class="texto-wrapper">
+                                <div class="servicio-texto1">PROYECTOS ARQUITECTÓNICOS</div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--==================== SECCIÓN DE CONTACTO ====================-->
+    <section class="seccion-contacto" id="contacto">
+        <div class="contenedor-contacto container">
+            <!-- FORMULARIO -->
+            <div class="contacto-formulario-box">
+                <h1 class="contacto-titulo" style="text-align: center;">CONTÁCTANOS</h1><br><br>
+                <form action="https://formsubmit.co/1b509c4fee7b007cff6d54f8a7cbbaee" method="POST" class="formulario-contacto">
+                    <input type="text" name="Nombre" placeholder="Nombre" required />
+                    <div class="form-row">
+                        <input type="text" name="Telefono" placeholder="Teléfono" required />
+                        <input type="email" name="Correo" placeholder="Correo electrónico" required />
+                    </div>
+                    <input type="text" name="Empresa" placeholder="Empresa" />
+                    <textarea name="Mensaje" placeholder="Mensaje" rows="4"></textarea><br><br>
+                    <button type="submit">Enviar</button>
+                </form>
+            </div>
+
+            <!-- INFORMACIÓN DE CONTACTO (IMAGEN / VIEDO DECORATIVO) -->
+            <div class="contacto-imagen-box" data-aos="slide-left">
+                <video class="contacto-imagen" autoplay muted loop playsinline>
+                    <source src="video/Chambin.mp4" type="video/mp4">
+                    Tu navegador no soporta la etiqueta de video.
+                </video>
+            </div>
+
+
+        </div>
+    </section>
+
+    <!--==================== FOOTER MODERNO ====================-->
+    <footer class="footer-dark">
+        <div class="container footer-container">
+
+            <!-- Encabezado -->
+            <div class="footer-titulo text-center">
+                <h2>CONSTRUCTORA <span>RADAC</span></h2>
+            </div>
+
+            <!-- Mapa e Imagen lado a lado -->
+            <div class="footer-mapa-contenedor">
+                <img src="img/empresa2.jpg" alt="Imagen RADAC" class="footer-imagen">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3767.498456424269!2d-98.2009506!3d19.2826637!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85cfddaf9032bd69%3A0x3518fbe8dd708572!2sConstructora%20RADAC!5e0!3m2!1ses-419!2smx!4v1720215600039!5m2!1ses-419!2smx"
+                    allowfullscreen="" loading="lazy" class="footer-mapa">
+                </iframe>
+            </div>
+
+        </div><br><br>
+        <div class="container footer-grid-dark">
+
+            <!-- Grupo WhatsApp -->
+            <div class="footer-item-dark">
+                <h4>ÚNETE A NUESTRO GRUPO</h4>
+                <p>Recibe novedades y promociones.</p>
+                <a href="https://chat.whatsapp.com/EicRiZRINTiEowGdPxM79I" class="footer-btn-dark">
+                    <i class="ri-group-line"></i> Ir al chat
+                </a>
+            </div>
+
+
+            <!-- Dirección -->
+            <div class="footer-item-dark">
+                <h4>¿DÓNDE LOCALIZARNOS?</h4>
+                <p>Tlaxcala, Tlax.</p>
+                <a href="https://maps.app.goo.gl/zM2QDK8e5hbQGENf9" class="footer-link-dark" target="_blank">
+        Calle 5 de Mayo Ote., Barrio de Tecpa Morales, 90833 Tlaxcala
+      </a>
+            </div>
+
+            <!-- Contacto y Redes -->
+            <div class="footer-item-dark">
+                <h4>CONTÁCTANOS</h4>
+                <p>+52 246 129 1672</p>
+                <div class="footer-social-dark">
+                    <a href="https://www.facebook.com/share/1VAifA4PmD/?mibextid=wwXIfr"><i class="ri-facebook-fill"></i></a>
+                    <a href="https://www.instagram.com/constructora.radac?igsh=aWdncTJoNWlqOGZ3"><i class="ri-instagram-line"></i></a>
+                    <a href="https://www.tiktok.com/@constructora.radac?_t=ZS-8xBBMiJA72Q&_r=1"><i class="ri-tiktok-fill"></i></a>
+                </div>
+            </div>
+
+            <!-- Métodos de pago -->
+            <div class="footer-item-dark">
+                <h4>MÉTODOS DE PAGO</h4>
+                <p>Contado y a crédito</p>
+            </div>
+
+        </div>
+        <!-- Crédito Final -->
+        <div class="footer-credit">
+            © 2025 Constructora RADAC. Todos los derechos reservados.
+        </div>
+    </footer>
+
+    <!-- Botón flotante de WhatsApp -->
+    <a href="https://chat.whatsapp.com/EicRiZRINTiEowGdPxM79I" class="whatsapp-float" target="_blank" title="Chatea con nosotros en WhatsApp y descubre novedades y promociones">
+        <img src="https://img.icons8.com/color/200/whatsapp--v1.png" alt="WhatsApp" class="whatsapp-icon">
+    </a>
+
+    <!-- Bootstrap y AOS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
+    <!------------ MAIN ------------>
+    <script>
+        const images = [
+            'img/proyecto5.jpg',
+            'img/proyecto2.jpg',
+            'img/proyecto3.jpg',
+            'img/proyecto4.jpg'
+        ];
+
+        let currentIndex = 0;
+        let showingBg1 = true;
+
+        const bg1 = document.querySelector('.hero-bg-1');
+        const bg2 = document.querySelector('.hero-bg-2');
+
+        // Set the first image
+        bg1.style.backgroundImage = `url('${images[0]}')`;
+        bg1.style.opacity = 1;
+
+        function crossfadeBackground() {
+            const nextIndex = (currentIndex + 1) % images.length;
+            const nextImage = images[nextIndex];
+
+            if (showingBg1) {
+                bg2.style.backgroundImage = `url('${nextImage}')`;
+                bg2.style.opacity = 1;
+                bg1.style.opacity = 0;
+            } else {
+                bg1.style.backgroundImage = `url('${nextImage}')`;
+                bg1.style.opacity = 1;
+                bg2.style.opacity = 0;
+            }
+
+            currentIndex = nextIndex;
+            showingBg1 = !showingBg1;
+        }
+
+        // Cambia imagen cada 8 segundos
+        setInterval(crossfadeBackground, 5000);
+    </script>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
+</body>
+
+</html>
