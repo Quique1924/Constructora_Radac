@@ -169,7 +169,7 @@ body {
 
 @media (max-width: 768px) {
     .hero-section {
-        height: 68vh;
+        height: 64vh;
         background-position: 40% 40%;
         /* ✅ Centro en móvil */
     }
