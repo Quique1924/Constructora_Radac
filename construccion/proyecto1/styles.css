@@ -164,7 +164,7 @@ body {
 
 @media (max-width: 768px) {
     .hero-section {
-        height: 81vh;
+        height: 75vh;
     }
     .hero-contenedor,
     .hero-content {
