@@ -164,7 +164,6 @@ body {
     font-size: clamp(2.5rem, 6vw, 4.5rem);
     font-weight: 700;
     line-height: 1.2;
-    text-shadow: 1px 1px 10px rgb(255, 255, 255);
 }
 
 
@@ -172,7 +171,6 @@ body {
 
 .hero-subtitle {
     font-size: clamp(1rem, 2.5vw, 1.3rem);
-    text-shadow: 1px 1px 5px rgb(255, 255, 255);
     color: white;
 }
 
