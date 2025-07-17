@@ -211,8 +211,8 @@ body {
         text-align: center;
     }
     .hero-content {
-        align-items: center;
-        text-align: center;
+        align-items: left;
+        text-align: left;
     }
     .hero-content img {
         width: 70%;

@@ -209,14 +209,13 @@ body {
         text-align: center;
     }
     .hero-content {
-        align-items: center;
-        text-align: center;
+        align-items: left;
+        text-align: left;
     }
     .hero-content img {
         width: 70%;
-        margin-bottom: 5rem;
-        /* Puedes ajustar esto */
-        margin-top: -1rem;
+        margin-bottom: 7rem;
+        margin-top: -5rem;
         /* Este valor sube el logo */
     }
     .hero-btn {
