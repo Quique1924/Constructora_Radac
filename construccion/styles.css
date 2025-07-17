@@ -195,7 +195,7 @@ body {
 
 @media (max-width: 768px) {
     .hero-section {
-        height: 100vh;
+        height: 89.5vh;
         overflow: hidden;
         margin: 0;
         padding: 0;
@@ -229,9 +229,9 @@ body {
         /* ✅ Bajar todo el bloque de texto */
     }
     .hero-content img {
-        max-width: 85%;
+        max-width: 100%;
         height: auto;
-        margin-top: -10rem;
+        margin-top: -4rem;
         /* ✅ Subir el logo */
         margin-bottom: 1.5rem;
     }

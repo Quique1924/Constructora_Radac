@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Constructora RADAC</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Remix Icon -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.min.css" rel="stylesheet" />
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Estilos propios -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+</head>
+
+<!-- FOOTER -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<body>
+
+    <!-- HEADER -->
+    <div class="header-fixed-container">
+        <header class="main-header">
+            <nav class="navbar navbar-expand-lg navbar-dark custom-navbar px-4 shadow-sm">
+
+                <a class="navbar-brand fw-bold marca-radac" href="#">
+                    <span class="marca-light">Constructora</span> RADAC
+                </a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+                <div class="collapse navbar-collapse" id="menu">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item"><a class="nav-link" href="#">INICIO</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">NOSOTROS</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">PROYECTOS</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">SERVICIOS</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#contacto">CONTACTO</a></li>
+                    </ul>
+                    <a href="#contacto" class="btn btn-cotizar ms-3">Cotizar</a>
+
+                </div>
+            </nav>
+        </header>
+    </div>
+
+    <!-- HERO SECTION CON IMAGEN DE FONDO -->
+    <section class="hero-section" style="background-image: url('img/proyecto1.jpg');">
+        <div class="hero-overlay">
+            <div class="hero-contenedor">
+                <div class="container">
+                    <div class="hero-content text-white" data-aos="fade-up">
+                        <br><br><br>
+                        <h1 class="hero-title">PROYECTO <br>TENANGO</h1><br>
+                        <a href="#contacto" class="btn btn-outline-light hero-btn mt-3">
+                            <i class="ri-whatsapp-line"></i> Cotiza tu proyecto ahora
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN PROYECTO -->
+    <section class="proyecto-section">
+        <!-- Banner con título centrado -->
+        <div class="proyecto-banner">
+            <h2>CASA TIPO RESIDENCIAL</h2>
+        </div>
+
+        <!-- Contenido del proyecto -->
+        <div class="proyecto-container container">
+            <div class="proyecto-imagen">
+                <img src="img/proyecto1.jpg" alt="Casa Olivos">
+            </div>
+            <div class="proyecto-detalles">
+                <h3 class="proyecto-titulo" style="text-align: center;">PROYECTO TENANGO</h3>
+
+                <!-- Lista de características -->
+                <div class="proyecto-etiqueta">
+                    <i class="ri-map-pin-line"></i>
+                    <span>Calle Allende No. 25, Santa María Acuitlapilco</span>
+                </div>
+                <div class="proyecto-etiqueta">
+                    <i class="ri-home-4-line"></i>
+                    <span>Casa de 2 niveles</span>
+                </div>
+                <div class="proyecto-etiqueta">
+                    <i class="ri-layout-line"></i>
+                    <span>3 Recámaras + 2 Baños</span>
+                </div>
+                <div class="proyecto-etiqueta">
+                    <i class="ri-car-line"></i>
+                    <span>Cochera para 2 autos</span>
+                </div>
+                <div class="proyecto-etiqueta">
+                    <i class="ri-pencil-ruler-2-line"></i>
+                    <span>Diseño moderno</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN PROCESO -->
+    <section class="proceso-section container my-1">
+        <h2 class="text-center mb-5">PROCESO</h2>
+
+        <!-- ETAPA 1 -->
+        <div class="proceso-etapa mb-5">
+            <h3 class="proceso-titulo">LEVANTAMIENTO TOPOGRÁFICO</h3>
+            <p class="proceso-descripcion">Se realizó un análisis del terreno con tecnología topográfica para determinar niveles, pendientes y características físicas del predio.</p>
+            <div class="proceso-galeria">
+                <img src="img/proyecto1.jpg" alt="Topografía 1">
+                <img src="img/proyecto1.jpg" alt="Topografía 2">
+                <img src="img/proyecto1.jpg" alt="Topografía 3">
+            </div>
+        </div>
+
+        <!-- ETAPA 2 -->
+        <div class="proceso-etapa mb-5">
+            <h3 class="proceso-titulo">MODELADO Y RENDERIZADO</h3>
+            <p class="proceso-descripcion">Con base en los planos y levantamientos se generó el modelo 3D arquitectónico y los renders de presentación para el cliente.</p>
+            <div class="proceso-galeria">
+                <img src="img/proyecto1.jpg" alt="Render 1">
+                <img src="img/proyecto1.jpg" alt="Render 2">
+                <img src="img/proyecto1.jpg" alt="Render 3">
+            </div>
+        </div>
+
+        <!-- ETAPA 3 -->
+        <div class="proceso-etapa mb-5">
+            <h3 class="proceso-titulo">PROCESO DE CONSTRUCCIÓN</h3>
+            <p class="proceso-descripcion">La obra avanzó de acuerdo a lo planeado, con supervisión continua para asegurar la calidad en cada etapa de construcción.</p>
+            <div class="proceso-galeria">
+                <img src="img/proyecto1.jpg" alt="Construcción 1">
+                <img src="img/proyecto1.jpg" alt="Construcción 2">
+                <img src="img/proyecto1.jpg" alt="Construcción 3">
+            </div>
+        </div>
+
+        <!-- ETAPA 4 -->
+        <div class="proceso-etapa mb-5">
+            <h3 class="proceso-titulo">ENTREGA</h3>
+            <p class="proceso-descripcion">El proyecto fue entregado conforme a lo establecido, cumpliendo con los estándares de calidad y satisfacción del cliente.</p>
+            <div class="proceso-galeria">
+                <img src="img/proyecto1.jpg" alt="Entrega 1">
+                <img src="img/proyecto1.jpg" alt="Entrega 2">
+                <img src="img/proyecto1.jpg" alt="Entrega 3">
+            </div>
+        </div>
+    </section>
+
+    <!--==================== FOOTER MODERNO ====================-->
+    <footer class="footer-dark">
+        </div>
+        <!-- Crédito Final -->
+        <div class="footer-credit">
+            © 2025 Constructora RADAC. Todos los derechos reservados.
+        </div>
+    </footer>
+
+    <!-- Botón flotante de WhatsApp -->
+    <a href="https://chat.whatsapp.com/EicRiZRINTiEowGdPxM79I" class="whatsapp-float" target="_blank" title="Chatea con nosotros en WhatsApp y descubre novedades y promociones">
+        <img src="https://img.icons8.com/color/200/whatsapp--v1.png" alt="WhatsApp" class="whatsapp-icon">
+    </a>
+
+    <!-- Bootstrap y AOS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
+</body>
+
+</html>
