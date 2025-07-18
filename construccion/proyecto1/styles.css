@@ -508,7 +508,7 @@ body {
         width: 89%;
         max-height: 450px;
         object-fit: cover;
-        border-radius: 20px;
+        border-radius: 0 !important;
     }
     .swiper-slide h5 {
         font-size: 16px;
