@@ -25,6 +25,7 @@
 body {
     padding-top: 84px;
     /* ajusta según altura total del header */
+    background-color: #e7e4e4;
 }
 
 
@@ -200,7 +201,7 @@ body {
 
 .proyecto-section {
     padding: -10;
-    background-color: #fff;
+    background-color: #e7e4e4;
 }
 
 .proyecto-banner {
@@ -308,8 +309,7 @@ body {
 
 .proceso-galeria img {
     width: 100%;
-    max-width: 300px;
-    border-radius: 6px;
+    max-width: 360px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     object-fit: cover;
 }
@@ -340,6 +340,638 @@ body {
     }
     .proceso-galeria img {
         max-width: 90%;
+    }
+}
+
+
+/* SECCIÓN VISTAS */
+
+
+/* Contenedor de toda la sección */
+
+.full-width-wrapper-vistas {
+    width: 100vw;
+    position: relative;
+    padding: 40px 0;
+}
+
+.titulo-vistas {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: #000;
+}
+
+.descripcion-vistas {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 1.5rem;
+}
+
+.descripcion-vistas1 {
+    font-size: 1rem;
+    color: #0f1371;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+
+/* Carrusel centrado dentro del contenedor */
+
+.contenedor-vistas-carousel {
+    max-width: 1140px;
+    margin: 0 auto;
+    position: relative;
+    padding: 0 20px;
+}
+
+
+/* Swiper básico */
+
+.swiper-vistas {
+    width: 100%;
+    padding: 20px 0;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+/* Modificar el tamaño del texto de los títulos en el carrusel */
+
+.swiper-slide h5 {
+    font-size: 1rem;
+    /* Cambia este valor para ajustar el tamaño del texto */
+    font-weight: 600;
+    /* Ajusta el grosor de la fuente si lo deseas */
+    color: #000000;
+    /* Cambia el color si lo prefieres */
+    margin-top: 10px;
+    /* Ajusta el espacio superior si lo necesitas */
+}
+
+.swiper-slide img {
+    width: 100%;
+    max-height: 350px;
+    object-fit: cover;
+}
+
+
+/* Botones personalizados */
+
+.vistas-button-prev,
+.vistas-button-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #000 !important;
+    color: #fff !important;
+    width: 60px !important;
+    height: 40px !important;
+    border-radius: 0 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    box-shadow: none !important;
+    border: none !important;
+    z-index: 10;
+}
+
+.vistas-button-prev {
+    left: 0 !important;
+}
+
+.vistas-button-next {
+    right: 0 !important;
+}
+
+
+/* Flechas */
+
+.vistas-button-prev::after,
+.vistas-button-next::after {
+    content: '' !important;
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-top: 2px solid #fff !important;
+    border-right: 2px solid #fff !important;
+}
+
+.vistas-button-prev::after {
+    transform: rotate(-135deg);
+    margin-left: 3px;
+}
+
+.vistas-button-next::after {
+    transform: rotate(45deg);
+    margin-right: 3px;
+}
+
+@media (max-width: 768px) {
+    .titulo-vistas {
+        text-align: center;
+    }
+    .descripcion-vistas {
+        text-align: center;
+    }
+    .descripcion-vistas1 {
+        text-align: center;
+    }
+    .full-width-wrapper-vistas {
+        width: 99vw;
+        padding: 50px 0;
+        overflow-x: hidden;
+    }
+    .contenedor-vistas-carousel {
+        width: 100%;
+        max-width: 100%;
+        padding: 0 10px;
+        box-sizing: border-box;
+    }
+    .swiper-vistas {
+        padding: 10px 0;
+    }
+    .swiper-slide {
+        padding: 0 5px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .swiper-slide img {
+        width: 89%;
+        max-height: 450px;
+        object-fit: cover;
+        border-radius: 20px;
+    }
+    .swiper-slide h5 {
+        font-size: 16px;
+        margin-top: 10px;
+    }
+    .vistas-button-prev,
+    .vistas-button-next {
+        width: 45px !important;
+        height: 35px !important;
+    }
+    .vistas-button-prev {
+        left: -5px !important;
+    }
+    .vistas-button-next {
+        right: -5px !important;
+    }
+    h2 {
+        font-size: 22px;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+}
+
+
+/* Carrusel centrado dentro del contenedor 2*/
+
+.contenedor-vistas-carousel2 {
+    max-width: 1140px;
+    margin: 0 auto;
+    position: relative;
+    padding: 0 20px;
+}
+
+.descripcion-vistas2 {
+    font-size: 1rem;
+    color: #0f1371;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+
+/* Swiper básico */
+
+.swiper-vistas2 {
+    width: 100%;
+    padding: 20px 0;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.swiper-slide img {
+    width: 100%;
+    max-height: 350px;
+    object-fit: cover;
+}
+
+
+/* Botones personalizados */
+
+.vistas-button-prev2,
+.vistas-button-next2 {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #000 !important;
+    color: #fff !important;
+    width: 60px !important;
+    height: 40px !important;
+    border-radius: 0 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    box-shadow: none !important;
+    border: none !important;
+    z-index: 10;
+}
+
+.vistas-button-prev2 {
+    left: 0 !important;
+}
+
+.vistas-button-next2 {
+    right: 0 !important;
+}
+
+
+/* Flechas */
+
+.vistas-button-prev2::after,
+.vistas-button-next2::after {
+    content: '' !important;
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-top: 2px solid #fff !important;
+    border-right: 2px solid #fff !important;
+}
+
+.vistas-button-prev2::after {
+    transform: rotate(-135deg);
+    margin-left: 3px;
+}
+
+.vistas-button-next2::after {
+    transform: rotate(45deg);
+    margin-right: 3px;
+}
+
+@media (max-width: 768px) {
+    .contenedor-vistas-carousel2 {
+        width: 100%;
+        max-width: 100%;
+        padding: 0 10px;
+        box-sizing: border-box;
+    }
+    .descripcion-vistas2 {
+        text-align: center;
+    }
+    .swiper-vistas2 {
+        padding: 10px 0;
+    }
+    .swiper-slide {
+        padding: 0 5px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .swiper-slide img {
+        width: 89%;
+        max-height: 450px;
+        object-fit: cover;
+        border-radius: 20px;
+    }
+    .swiper-slide h5 {
+        font-size: 16px;
+        margin-top: 10px;
+    }
+    .vistas-button-prev2,
+    .vistas-button-next2 {
+        width: 45px !important;
+        height: 35px !important;
+    }
+    .vistas-button-prev2 {
+        left: -5px !important;
+    }
+    .vistas-button-next2 {
+        right: -5px !important;
+    }
+}
+
+
+/* Carrusel centrado dentro del contenedor 3*/
+
+.contenedor-vistas-carousel3 {
+    max-width: 1140px;
+    margin: 0 auto;
+    position: relative;
+    padding: 0 20px;
+}
+
+.descripcion-vistas3 {
+    font-size: 1rem;
+    color: #0f1371;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+
+/* Swiper básico */
+
+.swiper-vistas3 {
+    width: 100%;
+    padding: 20px 0;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.swiper-slide img {
+    width: 100%;
+    max-height: 350px;
+    object-fit: cover;
+}
+
+
+/* Botones personalizados */
+
+.vistas-button-prev3,
+.vistas-button-next3 {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #000 !important;
+    color: #fff !important;
+    width: 60px !important;
+    height: 40px !important;
+    border-radius: 0 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    box-shadow: none !important;
+    border: none !important;
+    z-index: 10;
+}
+
+.vistas-button-prev3 {
+    left: 0 !important;
+}
+
+.vistas-button-next3 {
+    right: 0 !important;
+}
+
+
+/* Flechas */
+
+.vistas-button-prev3::after,
+.vistas-button-next3::after {
+    content: '' !important;
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-top: 2px solid #fff !important;
+    border-right: 2px solid #fff !important;
+}
+
+.vistas-button-prev3::after {
+    transform: rotate(-135deg);
+    margin-left: 3px;
+}
+
+.vistas-button-next3::after {
+    transform: rotate(45deg);
+    margin-right: 3px;
+}
+
+@media (max-width: 768px) {
+    .contenedor-vistas-carousel3 {
+        width: 100%;
+        max-width: 100%;
+        padding: 0 10px;
+        box-sizing: border-box;
+    }
+    .descripcion-vistas3 {
+        text-align: center;
+    }
+    .swiper-vistas3 {
+        padding: 10px 0;
+    }
+    .swiper-slide {
+        padding: 0 5px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .swiper-slide img {
+        width: 89%;
+        max-height: 450px;
+        object-fit: cover;
+        border-radius: 20px;
+    }
+    .swiper-slide h5 {
+        font-size: 16px;
+        margin-top: 10px;
+    }
+    .vistas-button-prev3,
+    .vistas-button-next3 {
+        width: 45px !important;
+        height: 35px !important;
+    }
+    .vistas-button-prev3 {
+        left: -5px !important;
+    }
+    .vistas-button-next3 {
+        right: -5px !important;
+    }
+}
+
+
+/* SECCIÓN PROYECTOS DESTACADOS */
+
+
+/* Contenedor de toda la sección (ocupa ancho completo) */
+
+.full-width-wrapper {
+    width: 100vw;
+    position: relative;
+    padding: 40px 0;
+    background-color: #e7e4e4;
+}
+
+
+/* Carrusel centrado dentro del contenedor */
+
+.carousel-container {
+    max-width: 1140px;
+    /* o el ancho que uses normalmente */
+    margin: 0 auto;
+    position: relative;
+    padding: 0 20px;
+}
+
+
+/* Swiper básico */
+
+.swiper {
+    width: 100%;
+    padding: 20px 0;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+/* Modificar el tamaño del texto de los títulos en el carrusel */
+
+.swiper-slide h4 {
+    font-size: 1.5rem;
+    /* Cambia este valor para ajustar el tamaño del texto */
+    font-weight: 600;
+    /* Ajusta el grosor de la fuente si lo deseas */
+    color: #000000;
+    /* Cambia el color si lo prefieres */
+    margin-top: 10px;
+    /* Ajusta el espacio superior si lo necesitas */
+}
+
+.swiper-slide img {
+    width: 100%;
+    max-height: 350px;
+    object-fit: cover;
+}
+
+
+/* Botones - ahora posicionados respecto al contenedor full-width */
+
+.swiper-button-prev,
+.swiper-button-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #000 !important;
+    color: #fff !important;
+    width: 60px !important;
+    height: 40px !important;
+    border-radius: 0 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    box-shadow: none !important;
+    border: none !important;
+    z-index: 10;
+}
+
+
+/* Botón izquierdo */
+
+.swiper-button-prev {
+    left: 0 !important;
+    /* puedes poner -20px si quieres que sobresalga más */
+}
+
+
+/* Botón derecho */
+
+.swiper-button-next {
+    right: 0 !important;
+}
+
+
+/* Flechas */
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+    content: '' !important;
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-top: 2px solid #fff !important;
+    border-right: 2px solid #fff !important;
+}
+
+.swiper-button-prev::after {
+    transform: rotate(-135deg);
+    margin-left: 3px;
+}
+
+.swiper-button-next::after {
+    transform: rotate(45deg);
+    margin-right: 3px;
+}
+
+@media (max-width: 768px) {
+    .full-width-wrapper {
+        width: 99vw;
+        padding: 50px 0;
+        /* menos padding para pantallas pequeñas */
+        overflow-x: hidden;
+        /* previene scroll lateral accidental */
+    }
+    .carousel-container {
+        width: 100%;
+        max-width: 100%;
+        padding: 0 10px;
+        box-sizing: border-box;
+    }
+    .swiper {
+        padding: 10px 0;
+    }
+    .swiper-slide {
+        padding: 0 5px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .swiper-slide img {
+        width: 100%;
+        max-height: 450px;
+        object-fit: cover;
+        border-radius: 10px;
+    }
+    .swiper-slide h5 {
+        font-size: 16px;
+        margin-top: 10px;
+    }
+    .swiper-button-prev,
+    .swiper-button-next {
+        width: 45px !important;
+        height: 35px !important;
+    }
+    .swiper-button-prev {
+        left: -5px !important;
+    }
+    .swiper-button-next {
+        right: -5px !important;
+    }
+    h2 {
+        font-size: 22px;
+        text-align: center;
+        margin-bottom: 20px;
     }
 }
 

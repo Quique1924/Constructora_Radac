@@ -25,6 +25,7 @@
 body {
     padding-top: 84px;
     /* ajusta según altura total del header */
+    background-color: #e7e4e4;
 }
 
 
@@ -269,6 +270,20 @@ body {
     align-items: center;
 }
 
+
+/* Modificar el tamaño del texto de los títulos en el carrusel */
+
+.swiper-slide h4 {
+    font-size: 1.5rem;
+    /* Cambia este valor para ajustar el tamaño del texto */
+    font-weight: 600;
+    /* Ajusta el grosor de la fuente si lo deseas */
+    color: #000000;
+    /* Cambia el color si lo prefieres */
+    margin-top: 10px;
+    /* Ajusta el espacio superior si lo necesitas */
+}
+
 .swiper-slide img {
     width: 100%;
     max-height: 350px;
@@ -360,9 +375,8 @@ body {
     }
     .swiper-slide img {
         width: 100%;
-        max-height: 450px;
+        max-height: 480px;
         object-fit: cover;
-        border-radius: 10px;
     }
     .swiper-slide h5 {
         font-size: 16px;
