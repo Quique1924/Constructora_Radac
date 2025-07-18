@@ -351,7 +351,7 @@ body {
 
 @media (max-width: 768px) {
     .full-width-wrapper {
-        width: 99vw;
+        width: 99.7vw;
         padding: 50px 0;
         /* menos padding para pantallas pequeñas */
         overflow-x: hidden;
