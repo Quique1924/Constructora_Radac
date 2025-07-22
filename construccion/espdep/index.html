@@ -31,22 +31,32 @@
         <header class="main-header">
             <nav class="navbar navbar-expand-lg navbar-dark custom-navbar px-4 shadow-sm">
 
-                <a class="navbar-brand fw-bold marca-radac" href="#">
+                <a class="navbar-brand fw-bold marca-radac" href="../../index.html">
                     <span class="marca-light">Constructora</span> RADAC
                 </a>
 
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+                    <span class="navbar-toggler-icon"></span>
+                </button>
                 <div class="collapse navbar-collapse" id="menu">
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                        <li class="nav-item"><a class="nav-link" href="#">INICIO</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">NOSOTROS</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">PROYECTOS</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">SERVICIOS</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#contacto">CONTACTO</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../../index.html">INICIO</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../../#conocenos">NOSOTROS</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../../#servicios">SERVICIOS</a></li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="serviciosDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                PROYECTOS
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="serviciosDropdown">
+                                <li><a class="dropdown-item" href="../index.html">CONSTRUCCIÓN</a></li>
+                                <li><a class="dropdown-item" href="../../#construccion">REMODELACIÓN</a></li>
+                                <li><a class="dropdown-item" href="../../#supervision">MANTENIMIENTOS</a></li>
+                                <li><a class="dropdown-item" href="../../#remodelacion">PROYECTOS ARQUITECTÓNICOS</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item"><a class="nav-link" href="../../#ubicacion">UBICACIÓN</a></li>
                     </ul>
-                    <a href="#contacto" class="btn btn-cotizar ms-3">Cotizar</a>
+                    <a href="../../#contacto" class="btn btn-cotizar ms-3">Cotizar</a>
 
                 </div>
             </nav>
@@ -106,170 +116,35 @@
                     <i class="ri-pencil-ruler-2-line"></i>
                     <span>Diseño moderno</span>
                 </div>
+                <div class="proyecto-etiqueta">
+                    <i class="ri-pencil-ruler-2-line"></i>
+                    <span>Diseño moderno</span>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- SECCIÓN PROCESO -->
     <section class="proceso-section container my-1">
-        <h2 class="text-center mb-5">PROCESO</h2>
-
         <!-- ETAPA 1 -->
         <div class="proceso-etapa mb-5">
-            <h3 class="proceso-titulo">LEVANTAMIENTO TOPOGRÁFICO</h3>
-            <p class="proceso-descripcion">Se realizó un análisis del terreno con tecnología topográfica para determinar niveles, pendientes y características físicas del predio.</p>
             <div class="proceso-galeria">
                 <img src="img/lev1.jpg" alt="Topografía 1">
                 <img src="img/lev2.jpg" alt="Topografía 2">
                 <img src="img/lev3.jpg" alt="Topografía 3">
-            </div>
-        </div>
-
-        <!-- ETAPA 2 -->
-        <div class="proceso-etapa mb-5">
-            <h3 class="proceso-titulo">MODELADO Y RENDERIZADO</h3>
-            <p class="proceso-descripcion">Con base en los planos y levantamientos se generó el modelo 3D arquitectónico y los renders de presentación para el cliente.</p>
-            <div class="proceso-galeria">
                 <img src="img/modelado1.jpg" alt="Render 1">
                 <img src="img/modelado3.jpg" alt="Render 2">
                 <img src="img/modelado2.jpg" alt="Render 3">
-            </div>
-        </div>
-
-        <!-- ETAPA 3 -->
-        <div class="proceso-etapa mb-5">
-            <h3 class="proceso-titulo">PROCESO DE CONSTRUCCIÓN</h3>
-            <p class="proceso-descripcion">La obra avanzó de acuerdo a lo planeado, con supervisión continua para asegurar la calidad en cada etapa de construcción.</p>
-            <div class="proceso-galeria">
                 <img src="img/cons1.jpg" alt="Construcción 1">
                 <img src="img/cons2.jpg" alt="Construcción 2">
                 <img src="img/cons3.jpg" alt="Construcción 3">
-            </div>
-        </div>
-
-        <!-- ETAPA 4 VISTAS-->
-        <div class="etapa-vistas mb-5">
-            <h3 class="titulo-vistas">ENTREGA FINAL</h3>
-            <p class="descripcion-vistas">El proyecto fue entregado conforme a lo establecido, cumpliendo con los estándares de calidad y satisfacción del cliente.</p>
-            <p class="descripcion-vistas1">EXTERIOR DEL INMUEBLE</p>
-
-            <!-- Contenedor centrado del carrusel 1-->
-            <div class="contenedor-vistas-carousel mx-auto">
-                <!-- Carrusel con Swiper -->
-                <div class="swiper swiper-vistas">
-                    <div class="swiper-wrapper">
-                        <!-- Proyecto 1 -->
-                        <div class="swiper-slide">
-                            <img src="img/c1.jpg">
-                            <h5 class="text-center mt-2">Vista frontal</h5>
-                        </div>
-
-                        <!-- Proyecto 2 -->
-                        <div class="swiper-slide">
-                            <img src="img/c2.jpg">
-                            <h5 class="text-center mt-2">vista lateral derecha</h5>
-                        </div>
-
-                        <!-- Proyecto 3 -->
-                        <div class="swiper-slide">
-                            <img src="img/c3.jpg">
-                            <h5 class="text-center mt-2">Vista trasera</h5>
-                        </div>
-
-                        <!-- Proyecto 4 -->
-                        <div class="swiper-slide">
-                            <img src="img/c4.jpg">
-                            <h5 class="text-center mt-2">vista lateral izquierda</h5>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Botones de navegación -->
-                <div class="vistas-button-prev"></div>
-                <div class="vistas-button-next"></div>
-            </div>
-        </div>
-        <div class="etapa-vistas mb-5">
-            <p class="descripcion-vistas2">PLANTA BAJA</p>
-            <!-- Contenedor centrado del carrusel 2 -->
-            <div class="contenedor-vistas-carousel2 mx-auto">
-                <!-- Carrusel con Swiper -->
-                <div class="swiper swiper-vistas2">
-                    <div class="swiper-wrapper">
-                        <!-- Proyecto 1 -->
-                        <div class="swiper-slide">
-                            <img src="img/c1.jpg">
-                            <h5 class="text-center mt-2">Vista frontal</h5>
-                        </div>
-
-                        <!-- Proyecto 2 -->
-                        <div class="swiper-slide">
-                            <img src="img/c2.jpg">
-                            <h5 class="text-center mt-2">vista lateral derecha</h5>
-                        </div>
-
-                        <!-- Proyecto 3 -->
-                        <div class="swiper-slide">
-                            <img src="img/c3.jpg">
-                            <h5 class="text-center mt-2">Vista trasera</h5>
-                        </div>
-
-                        <!-- Proyecto 4 -->
-                        <div class="swiper-slide">
-                            <img src="img/c4.jpg">
-                            <h5 class="text-center mt-2">vista lateral izquierda</h5>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Botones de navegación -->
-                <div class="vistas-button-prev2"></div>
-                <div class="vistas-button-next2"></div>
-            </div>
-        </div>
-        <div class="etapa-vistas mb-5">
-            <p class="descripcion-vistas3">PLANTA ALTA</p>
-            <!-- Contenedor centrado del carrusel 3 -->
-            <div class="contenedor-vistas-carousel3 mx-auto">
-                <!-- Carrusel con Swiper -->
-                <div class="swiper swiper-vistas3">
-                    <div class="swiper-wrapper">
-                        <!-- Proyecto 1 -->
-                        <div class="swiper-slide">
-                            <img src="img/c1.jpg">
-                            <h5 class="text-center mt-2">Vista frontal</h5>
-                        </div>
-
-                        <!-- Proyecto 2 -->
-                        <div class="swiper-slide">
-                            <img src="img/c2.jpg">
-                            <h5 class="text-center mt-2">vista lateral derecha</h5>
-                        </div>
-
-                        <!-- Proyecto 3 -->
-                        <div class="swiper-slide">
-                            <img src="img/c3.jpg">
-                            <h5 class="text-center mt-2">Vista trasera</h5>
-                        </div>
-
-                        <!-- Proyecto 4 -->
-                        <div class="swiper-slide">
-                            <img src="img/c4.jpg">
-                            <h5 class="text-center mt-2">vista lateral izquierda</h5>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Botones de navegación -->
-                <div class="vistas-button-prev3"></div>
-                <div class="vistas-button-next3"></div>
             </div>
         </div>
     </section>
 
     <!-- SECCIÓN DE PROYECTOS -->
     <section class="proyectos-section full-width-wrapper my-5">
-        <h2 class="text-center mb-4 fw-bold">Nuestros Proyectos</h2>
+        <h2 class="text-center mb-4 fw-bold">SEGMENTOS DE OBRA</h2>
 
         <!-- Contenedor centrado del carrusel -->
         <div class="carousel-container mx-auto">
@@ -278,42 +153,42 @@
                 <div class="swiper-wrapper">
                     <!-- Proyecto 1 -->
                     <div class="swiper-slide">
-                        <a href="index.html">
+                        <a href="../comphab/index.html">
                             <img src="img/casa1.jpg">
                         </a>
-                        <h4 class="text-center mt-2">Proyecto Tizatlán</h4>
+                        <h4 class="text-center mt-2">Complejos Habitacionales</h4>
                     </div>
 
                     <!-- Proyecto 2 -->
                     <div class="swiper-slide">
-                        <a href="proyectos/proyecto2/index.html">
+                        <a href="../constresi/index.html">
                             <img src="../img/proyecto2.jpg">
                         </a>
-                        <h4 class="text-center mt-2">Proyecto 2</h4>
+                        <h4 class="text-center mt-2">Construcciones Residenciales</h4>
                     </div>
 
                     <!-- Proyecto 3 -->
                     <div class="swiper-slide">
-                        <a href="proyectos/proyecto3/index.html">
+                        <a href="../espdep/index.html">
                             <img src="../img/proyecto3.jpg">
                         </a>
-                        <h4 class="text-center mt-2">Proyecto 3</h4>
+                        <h4 class="text-center mt-2">Espacios Deportivos</h4>
                     </div>
 
                     <!-- Proyecto 4 -->
                     <div class="swiper-slide">
-                        <a href="proyectos/proyecto4/index.html">
+                        <a href="../alma/index.html">
                             <img src="../img/proyecto4.jpg">
                         </a>
-                        <h4 class="text-center mt-2">Proyecto 4</h4>
+                        <h4 class="text-center mt-2">Almacenes</h4>
                     </div>
 
                     <!-- Proyecto 5 -->
                     <div class="swiper-slide">
-                        <a href="proyectos/proyecto5/index.html">
+                        <a href="../otros/index.html">
                             <img src="../img/proyecto5.jpg">
                         </a>
-                        <h4 class="text-center mt-2">Proyecto 5</h4>
+                        <h4 class="text-center mt-2">Otros</h4>
                     </div>
                 </div>
             </div>
