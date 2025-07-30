@@ -90,10 +90,10 @@
         <!-- Contenido del proyecto -->
         <div class="proyecto-container container">
             <div class="proyecto-imagen">
-                <img src="img/tizatlán1.jpg" alt="">
+                <img src="img/tizatlán1.jpg" alt class="home__img">
             </div>
             <div class="proyecto-imagen">
-                <img src="img/tizatlán2.jpg" alt="">
+                <img src="img/tizatlán2.jpg" alt class="home__img1">
             </div>
             <div class="proyecto-detalles">
                 <h3 class="proyecto-titulo" style="text-align: center;">PROYECTO TIZATLÁN</h3>
@@ -101,44 +101,30 @@
                 <!-- Lista de características -->
                 <div class="proyecto-etiqueta">
                     <i class="ri-map-pin-line"></i>
-                    <span>Calle Allende No. 25, Santa María Acuitlapilco</span>
+                    <span>Del Potrero No. 8, Tizatlán, Tlaxcala</span>
                 </div>
                 <div class="proyecto-etiqueta">
                     <i class="ri-home-4-line"></i>
-                    <span>Casa de 2 niveles</span>
+                    <span>Casa de 2 niveles + cisterna de 2,500 lts.</span>
                 </div>
                 <div class="proyecto-etiqueta">
                     <i class="ri-layout-line"></i>
-                    <span>3 Recámaras + 2 Baños</span>
+                    <span>2 Recámaras + 1.5 Baños</span>
                 </div>
                 <div class="proyecto-etiqueta">
                     <i class="ri-car-line"></i>
-                    <span>Cochera para 2 autos</span>
+                    <span>Cochera para 1 auto</span>
                 </div>
                 <div class="proyecto-etiqueta">
-                    <i class="ri-pencil-ruler-2-line"></i>
-                    <span>Diseño moderno</span>
+                    <i class="ri-sofa-line"></i>
+                    <span>Sala Comedor</span>
                 </div>
                 <div class="proyecto-etiqueta">
-                    <i class="ri-pencil-ruler-2-line"></i>
-                    <span>Diseño moderno</span>
+                    <i class="ri-fridge-line"></i>
+                    <span>Cocina Integral</span>
                 </div>
             </div>
         </div>
-        <!-- SECCIÓN PROCESO -->
-        <section class="proceso-section container my-1">
-            <!-- ETAPA 1 -->
-            <div class="proceso-etapa mb-5">
-                <div class="proceso-galeria">
-                    <img src="img/t1.jpg" alt="Cancha">
-                    <img src="img/t2.jpg" alt="Cancha">
-                    <img src="img/t3.jpg" alt="Cancha">
-                    <img src="img/t4.jpg" alt="Cancha">
-                    <img src="img/t5.jpg" alt="Cancha">
-                    <img src="img/t6.jpg" alt="Cancha">
-                </div>
-            </div>
-        </section>
 
         <!-- Contenido del proyecto -->
         <div class="proyecto-container container">
@@ -154,27 +140,27 @@
                 <!-- Lista de características -->
                 <div class="proyecto-etiqueta">
                     <i class="ri-map-pin-line"></i>
-                    <span>Calle Allende No. 25, Santa María Acuitlapilco</span>
+                    <span>Madero 16, Santa María Acuitlapilco, Tlaxcala</span>
                 </div>
                 <div class="proyecto-etiqueta">
                     <i class="ri-home-4-line"></i>
-                    <span>Casa de 2 niveles</span>
+                    <span>Casa de 2 niveles + cisterna de 1,200 lts.</span>
                 </div>
                 <div class="proyecto-etiqueta">
                     <i class="ri-layout-line"></i>
-                    <span>3 Recámaras + 2 Baños</span>
+                    <span>3 Recámaras + 1.5 Baños</span>
                 </div>
                 <div class="proyecto-etiqueta">
                     <i class="ri-car-line"></i>
-                    <span>Cochera para 2 autos</span>
+                    <span>Cochera para 1 auto</span>
                 </div>
                 <div class="proyecto-etiqueta">
-                    <i class="ri-pencil-ruler-2-line"></i>
-                    <span>Diseño moderno</span>
+                    <i class="ri-sofa-line"></i>
+                    <span>Sala Comedor</span>
                 </div>
                 <div class="proyecto-etiqueta">
-                    <i class="ri-pencil-ruler-2-line"></i>
-                    <span>Diseño moderno</span>
+                    <i class="ri-fridge-line"></i>
+                    <span>Cocina Integral</span>
                 </div>
             </div>
         </div>
@@ -239,7 +225,7 @@
                     <!-- Proyecto 2 -->
                     <div class="swiper-slide">
                         <a href="../constresi/index.html">
-                            <img src="../img/proyecto2.jpg">
+                            <img src="../img/consres.jpg">
                         </a>
                         <h4 class="text-center mt-2">Construcciones Residenciales</h4>
                     </div>
@@ -255,7 +241,7 @@
                     <!-- Proyecto 4 -->
                     <div class="swiper-slide">
                         <a href="../alma/index.html">
-                            <img src="../img/proyecto4.jpg">
+                            <img src="../img/bodegas.avif">
                         </a>
                         <h4 class="text-center mt-2">Almacenes</h4>
                     </div>
@@ -325,6 +311,34 @@
             }
         });
     </script>
+    <!--==================== MAIN JS ====================-->
+    <!--==================== MAIN JS ====================-->
+    <script>
+        const images1 = ["img/tizatlán1.jpg", "img/t1.jpg", "img/t2.jpg", "img/t3.jpg", "img/t4.jpg"];
+        let currentIndex1 = 0;
+        const imgElement1 = document.querySelector('.home__img');
+
+        function changeImage1() {
+            currentIndex1 = (currentIndex1 + 1) % images1.length;
+            imgElement1.src = images1[currentIndex1];
+        }
+
+        setInterval(changeImage1, 5000); // Cambia cada 5 segundos
+    </script>
+
+    <script>
+        const images2 = ["img/tizatlán2.jpg", "img/t5.jpg", "img/t6.jpg", "img/t7.jpg", "img/t8.jpg"];
+        let currentIndex2 = 0;
+        const imgElement2 = document.querySelector('.home__img1');
+
+        function changeImage2() {
+            currentIndex2 = (currentIndex2 + 1) % images2.length;
+            imgElement2.src = images2[currentIndex2];
+        }
+
+        setInterval(changeImage2, 5000); // Cambia cada 5 segundos
+    </script>
+
 
 </body>
 
