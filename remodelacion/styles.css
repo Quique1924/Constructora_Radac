@@ -308,7 +308,7 @@ body {
     }
     .proyecto-lista {
         padding-left: 1.2rem;
-        text-align: justify;
+        text-align: left;
     }
     .proyecto-descripcion-remodelacion p {
         text-align: justify;
