@@ -313,6 +313,14 @@ body {
     object-fit: cover;
 }
 
+.proceso-subtitulo {
+    text-align: center;
+    font-size: 2rem;
+    margin: 15px 0;
+    font-weight: 600;
+    color: #333;
+}
+
 
 /* ======================= */
 
