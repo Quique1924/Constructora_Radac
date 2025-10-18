@@ -1,3 +1,42 @@
+/* ===================== */
+
+
+/* Header fijo y Navbar  */
+
+
+/* ===================== */
+
+:root {
+    /* se setea dinámicamente en JS con la altura real del header */
+    --header-h: 50px;
+}
+
+
+/* Scroll suave y offset para TODAS las anclas (#...) */
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: var(--header-h);
+}
+
+
+/* margen adicional para objetivos de ancla (por si el id está en un contenedor interno) */
+
+*[id] {
+    scroll-margin-top: var(--header-h);
+}
+
+
+/* Fallback por si algún navegador ignora lo anterior */
+
+*[id]::before {
+    content: "";
+    display: block;
+    height: 0;
+    margin-top: 0;
+}
+
+
 /* Fijar el header */
 
 .header-fixed-container {
@@ -23,7 +62,7 @@
 /* Para evitar que el contenido se esconda debajo del header fijo */
 
 body {
-    padding-top: 84px;
+    padding-top: 100px;
     /* ajusta según altura total del header */
 }
 
@@ -32,7 +71,7 @@ body {
 
 .navbar .nav-link {
     color: #ffffff;
-    margin: 0 10px;
+    margin: 0 0px;
     font-weight: 500;
 }
 
@@ -129,7 +168,7 @@ body {
     align-items: stretch;
     justify-content: flex-start;
     overflow: hidden;
-    background: linear-gradient(rgba(0, 0, 0, 0.496), rgba(0, 0, 0, 0.496)), url('../img/proyecto2.jpg') center center / cover no-repeat;
+    background: linear-gradient(rgba(0, 0, 0, 0.496), rgba(0, 0, 0, 0.496)), url('../img/Imagen5.jpg') center center / cover no-repeat;
 }
 
 
@@ -250,6 +289,42 @@ body {
 }
 
 
+/* Logo tipo botón */
+
+.logo-btn {
+    height: 60px;
+    /* ajusta el tamaño */
+    width: auto;
+    /* mantiene proporción */
+    cursor: pointer;
+    /* efecto "botón" */
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+
+/* Efecto hover */
+
+.logo-btn:hover {
+    transform: scale(1.05);
+    /* pequeño zoom */
+    opacity: 0.9;
+    /* leve transparencia */
+}
+
+
+/* Ajuste de margen si lo usas dentro de una navbar */
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    padding: 0;
+}
+
+.marca-radac {
+    text-decoration: none;
+}
+
+
 /* SECCIÓN CONÓCENOS */
 
 .section-conocenos {
@@ -335,51 +410,44 @@ body {
 }
 
 
-/* CONTENEDOR GENERAL SERVICIOS*/
+/* ======================== */
+
+
+/* Servicios (fondo imagen) */
+
+
+/* ======================== */
 
 .contenedor-servicios {
     background-image: url('../img/fondo-servicios.png');
-    /* Ruta de tu imagen */
     background-size: cover;
-    /* Para que cubra toda el área */
     background-position: center;
-    /* Centrado */
     background-repeat: no-repeat;
-    /* Que no se repita */
-    padding: 20px 0;
-    /* NUEVOS AJUSTES */
-    height: 92vh;
-    /* Cambia este valor según lo que necesites */
-    max-height: 1000px;
-    /* Evita que crezca demasiado */
-    overflow: hidden;
-    /* Oculta cualquier desbordamiento */
+    min-height: 100vh;
+    /* no recorta el contenido */
+    padding: 40px 0 90px;
+    /* espacio superior/inferior */
+    overflow: visible;
+    /* deja fluir el contenido */
 }
 
 .titulo-servicios {
     font-size: 5rem;
     font-weight: 700;
-    line-height: 2;
-    margin-bottom: 5px;
+    line-height: 1.15;
+    margin-bottom: 12px;
     color: #3e4c6d;
 }
 
-
-/* CAJA POR SERVICIO */
-
 .servicio-box {
     position: relative;
-    background-color: transparent;
+    background: transparent;
     text-align: center;
-    color: white;
+    color: #fff;
 }
 
-
-/* CONTENEDOR DE LA IMAGEN */
-
 .imagen-wrapper {
-    background-color: #11111100;
-    /* Fondo para distinguir la imagen */
+    background-color: #0000;
     overflow: hidden;
     position: relative;
     z-index: 1;
@@ -390,7 +458,7 @@ body {
     width: 100%;
     height: 400px;
     object-fit: cover;
-    transition: transform 0.4s ease;
+    transition: transform .4s ease;
     display: block;
 }
 
@@ -398,24 +466,15 @@ body {
     transform: scale(1.05);
 }
 
-
-/* CONTENEDOR DEL TEXTO CON FONDO DIFERENTE */
-
 .texto-wrapper {
-    background-color: #fff;
+    background: #fff;
     padding: 10px;
-    margin-top: -80px;
-    /* Hace que el texto suba y se sobreponga a la imagen */
     position: relative;
     z-index: 2;
     width: 90%;
-    margin-left: auto;
-    margin-right: auto;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.382);
+    margin: -80px auto 0;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, .382);
 }
-
-
-/* ESTILO DEL TEXTO */
 
 .servicio-texto {
     color: #000;
@@ -437,6 +496,33 @@ body {
     text-decoration: none;
     color: inherit;
     display: block;
+}
+
+@media screen and (max-width:768px) {
+    .contenedor-servicios {
+        min-height: auto;
+        padding: 40px 0 30px;
+    }
+    .titulo-servicios {
+        font-size: 2.8rem;
+        line-height: 1.4;
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+    .imagen-wrapper {
+        padding: 0;
+    }
+    .imagen-wrapper img {
+        height: 250px;
+    }
+    .texto-wrapper {
+        width: 95%;
+        margin-top: -35px;
+    }
+    .servicio-texto {
+        font-size: 1rem;
+        padding: 15px 10px;
+    }
 }
 
 
@@ -670,7 +756,7 @@ hr {
 .footer-imagen {
     flex: 1 1 1px;
     /* ✅ Tú puedes cambiar este tamaño */
-    max-width: 100%;
+    max-width: 500%;
     height: 300px;
     object-fit: contain;
     /* Muestra todo sin cortar */
