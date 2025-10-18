@@ -19,6 +19,12 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 
+    <!-- Swiper CSS (necesario) -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+
+    <!-- Tu CSS (pon tu <link> a styles.css si lo separas) -->
+    <link rel="stylesheet" href="styles.css">
+
 </head>
 
 <!-- FOOTER -->
@@ -51,7 +57,7 @@
                                 <li><a class="dropdown-item" href="../construccion/index.html">CONSTRUCCIÓN</a></li>
                                 <li><a class="dropdown-item" href="../remodelacion/index.html">REMODELACIÓN</a></li>
                                 <li><a class="dropdown-item" href="../mantenimientos/index.html">MANTENIMIENTOS</a></li>
-                                <li><a class="dropdown-item" href="../renderizados/index.html">PROYECTOS ARQUITECTÓNICOS</a></li>
+                                <li><a class="dropdown-item" href="../renderizados/index.html">DISEÑO ARQUITECTÓNICO</a></li>
                             </ul>
                         </li>
                         <li class="nav-item"><a class="nav-link" href="../#ubicacion">UBICACIÓN</a></li>
@@ -71,7 +77,7 @@
                     <div class="hero-content text-white" data-aos="fade-up">
                         <br><br><br>
                         <h1 class="hero-title"><br>DEL BOCETO A <br>LA REALIDAD <br>VIRTUAL</h1><br>
-                        <a href="#contacto" class="btn btn-outline-light hero-btn mt-3">
+                        <a href="../#contacto" class="btn btn-outline-light hero-btn mt-3">
                             <i class="ri-whatsapp-line"></i> Cotiza tu proyecto ahora
                         </a>
                     </div>
@@ -80,85 +86,148 @@
         </div>
     </section>
 
-    <!-- SECCIÓN PROCESO -->
-    <section class="proceso-section container my-1">
-        <!-- ETAPA 1 -->
-        <div class="proceso-etapa mb-5">
-            <h4 class="proceso-subtitulo">CABAÑAS</h4>
-            <div class="proceso-galeria">
-                <img src="img/r1.jpg" alt="Mantenimiento">
-                <img src="img/r2.jpg" alt="Mantenimiento">
-                <img src="img/r12.jpg" alt="Mantenimiento">
-                <img src="img/r4.jpg" alt="Mantenimiento">
-                <img src="img/r5.jpg" alt="Mantenimiento">
-                <img src="img/r6.jpeg" alt="Mantenimiento">
-                <img src="img/r15.jpg" alt="Mantenimiento">
-                <img src="img/p6.jpg" alt="Mantenimiento">
+    <!-- SECCIONES -->
+    <section class="full-width-wrapper">
+        <h2 class="text-center mb-4 fw-bold">CABAÑAS</h2>
+        <div class="carousel carousel--full" style="--slide-height: 380px; --slide-width: 100%;">
+            <div class="carousel-container">
+                <div class="swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"><img src="img/r1.jpg" alt="Cabaña 1" loading="lazy"></div>
+                        <div class="swiper-slide"><img src="img/r2.jpg" alt="Cabaña 2" loading="lazy"></div>
+                        <div class="swiper-slide"><img src="img/r12.jpg" alt="Cabaña 3" loading="lazy"></div>
+                        <div class="swiper-slide"><img src="img/r4.jpg" alt="Cabaña 4" loading="lazy"></div>
+                        <div class="swiper-slide"><img src="img/r5.jpg" alt="Cabaña 5" loading="lazy"></div>
+                        <div class="swiper-slide"><img src="img/r6.jpeg" alt="Cabaña 6" loading="lazy"></div>
+                        <div class="swiper-slide"><img src="img/r15.jpg" alt="Cabaña 7" loading="lazy"></div>
+                        <div class="swiper-slide"><img src="img/p6.jpg" alt="Cabaña 8" loading="lazy"></div>
+                    </div>
+                </div>
             </div>
-            <h4 class="proceso-subtitulo">FACHADAS</h4>
-            <div class="proceso-galeria">
-                <img src="img/f1.jpg" alt="Mantenimiento">
-                <img src="img/f2.jpg" alt="Mantenimiento">
-                <img src="img/f13.jpg" alt="Mantenimiento">
-                <img src="img/f14.jpg" alt="Mantenimiento">
-                <img src="img/f2,5.jpg" alt="Mantenimiento">
-                <img src="img/f4.jpg" alt="Mantenimiento">
-                <img src="img/f5.jpg" alt="Mantenimiento">
-                <img src="img/f7.jpg" alt="Mantenimiento">
-                <img src="img/f8.jpg" alt="Mantenimiento">
-                <img src="img/f9.jpg" alt="Mantenimiento">
-                <img src="img/f10.jpg" alt="Mantenimiento">
-                <img src="img/f3.jpg" alt="Mantenimiento">
-                <img src="img/f11.jpg" alt="Mantenimiento">
-                <img src="img/f12.jpg" alt="Mantenimiento">
+        </div>
+    </section>
+
+    <section class="full-width-wrapper">
+        <h2 class="text-center mb-4 fw-bold">FACHADAS</h2>
+        <div class="carousel carousel--full" style="--slide-height: 420px; --slide-width: 100%;">
+            <div class="carousel-container">
+                <div class="swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"><img src="img/f1.jpg" alt="Fachada 1" loading="lazy"></div>
+                        <div class="swiper-slide"><img src="img/f2.jpg" alt="Fachada 2" loading="lazy"></div>
+                        <div class="swiper-slide"><img src="img/f13.jpg" alt="Fachada 3" loading="lazy"></div>
+                        <div class="swiper-slide"><img src="img/f14.jpg" alt="Fachada 4" loading="lazy"></div>
+                        <div class="swiper-slide"><img src="img/f2,5.jpg" alt="Fachada 5" loading="lazy"></div>
+                        <div class="swiper-slide"><img src="img/f4.jpg" alt="Fachada 6" loading="lazy"></div>
+                        <div class="swiper-slide"><img src="img/f5.jpg" alt="Fachada 7" loading="lazy"></div>
+                        <div class="swiper-slide"><img src="img/f7.jpg" alt="Fachada 8" loading="lazy"></div>
+                        <div class="swiper-slide"><img src="img/f8.jpg" alt="Fachada 9" loading="lazy"></div>
+                        <div class="swiper-slide"><img src="img/f9.jpg" alt="Fachada 10" loading="lazy"></div>
+                        <div class="swiper-slide"><img src="img/f10.jpg" alt="Fachada 11" loading="lazy"></div>
+                        <div class="swiper-slide"><img src="img/f3.jpg" alt="Fachada 12" loading="lazy"></div>
+                        <div class="swiper-slide"><img src="img/f11.jpg" alt="Fachada 13" loading="lazy"></div>
+                        <div class="swiper-slide"><img src="img/f12.jpg" alt="Fachada 14" loading="lazy"></div>
+                    </div>
+                </div>
             </div>
-            <h4 class="proceso-subtitulo">COCINAS</h4>
-            <div class="proceso-galeria">
-                <img src="img/i6.jpg" alt="Mantenimiento">
-                <img src="img/i8.jpg" alt="Mantenimiento">
-                <img src="img/i9.jpg" alt="Mantenimiento">
-                <img src="img/i10.jpg" alt="Mantenimiento">
-                <img src="img/i11.jpg" alt="Mantenimiento">
+        </div>
+    </section>
+
+    <section class="full-width-wrapper">
+        <h2 class="text-center mb-4 fw-bold">COCINAS</h2>
+        <div class="carousel carousel--full" style="--slide-height: 380px; --slide-width: 100%;">
+            <div class="carousel-container">
+                <div class="swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"><img src="img/i6.jpg" alt="Cocina 1" loading="lazy"></div>
+                        <div class="swiper-slide"><img src="img/i8.jpg" alt="Cocina 2" loading="lazy"></div>
+                        <div class="swiper-slide"><img src="img/i9.jpg" alt="Cocina 3" loading="lazy"></div>
+                        <div class="swiper-slide"><img src="img/i10.jpg" alt="Cocina 4" loading="lazy"></div>
+                        <div class="swiper-slide"><img src="img/i11.jpg" alt="Cocina 5" loading="lazy"></div>
+                    </div>
+                </div>
             </div>
-            <h4 class="proceso-subtitulo">SALAS</h4>
-            <div class="proceso-galeria">
-                <img src="img/i2.jpg" alt="Mantenimiento">
-                <img src="img/i4.jpg" alt="Mantenimiento">
-                <img src="img/i5.jpg" alt="Mantenimiento">
-                <img src="img/i24.jpg" alt="Mantenimiento">
-                <img src="img/i20.jpg" alt="Mantenimiento">
-                <img src="img/i15.jpg" alt="Mantenimiento">
+        </div>
+    </section>
+
+    <section class="full-width-wrapper">
+        <h2 class="text-center mb-4 fw-bold">SALAS</h2>
+        <div class="carousel carousel--full" style="--slide-height: 380px; --slide-width: 100%;">
+            <div class="carousel-container">
+                <div class="swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"><img src="img/i2.jpg" alt="Sala 1" loading="lazy"></div>
+                        <div class="swiper-slide"><img src="img/i4.jpg" alt="Sala 2" loading="lazy"></div>
+                        <div class="swiper-slide"><img src="img/i5.jpg" alt="Sala 3" loading="lazy"></div>
+                        <div class="swiper-slide"><img src="img/i24.jpg" alt="Sala 4" loading="lazy"></div>
+                        <div class="swiper-slide"><img src="img/i20.jpg" alt="Sala 5" loading="lazy"></div>
+                        <div class="swiper-slide"><img src="img/i15.jpg" alt="Sala 6" loading="lazy"></div>
+                    </div>
+                </div>
             </div>
-            <h4 class="proceso-subtitulo">HABITACIONES</h4>
-            <div class="proceso-galeria">
-                <img src="img/i1.jpg" alt="Mantenimiento">
-                <img src="img/i3.jpg" alt="Mantenimiento">
-                <img src="img/i7.jpg" alt="Mantenimiento">
-                <img src="img/i18.jpg" alt="Mantenimiento">
-                <img src="img/i19.jpg" alt="Mantenimiento">
+        </div>
+    </section>
+
+    <section class="full-width-wrapper">
+        <h2 class="text-center mb-4 fw-bold">HABITACIONES</h2>
+        <div class="carousel carousel--full" style="--slide-height: 380px; --slide-width: 100%;">
+            <div class="carousel-container">
+                <div class="swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"><img src="img/i1.jpg" alt="Habitación 1" loading="lazy"></div>
+                        <div class="swiper-slide"><img src="img/i3.jpg" alt="Habitación 2" loading="lazy"></div>
+                        <div class="swiper-slide"><img src="img/i7.jpg" alt="Habitación 3" loading="lazy"></div>
+                        <div class="swiper-slide"><img src="img/i18.jpg" alt="Habitación 4" loading="lazy"></div>
+                        <div class="swiper-slide"><img src="img/i19.jpg" alt="Habitación 5" loading="lazy"></div>
+                    </div>
+                </div>
             </div>
-            <h4 class="proceso-subtitulo">BAÑOS</h4>
-            <div class="proceso-galeria">
-                <img src="img/i13.jpg" alt="Mantenimiento">
-                <img src="img/i14.jpg" alt="Mantenimiento">
-                <img src="img/i17.jpg" alt="Mantenimiento">
-                <img src="img/i25.jpg" alt="Mantenimiento">
+        </div>
+    </section>
+
+    <section class="full-width-wrapper">
+        <h2 class="text-center mb-4 fw-bold">BAÑOS</h2>
+        <div class="carousel carousel--full" style="--slide-height: 380px; --slide-width: 100%;">
+            <div class="carousel-container">
+                <div class="swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"><img src="img/i13.jpg" alt="Baño 1" loading="lazy"></div>
+                        <div class="swiper-slide"><img src="img/i14.jpg" alt="Baño 2" loading="lazy"></div>
+                        <div class="swiper-slide"><img src="img/i17.jpg" alt="Baño 3" loading="lazy"></div>
+                        <div class="swiper-slide"><img src="img/i25.jpg" alt="Baño 4" loading="lazy"></div>
+                    </div>
+                </div>
             </div>
-            <h4 class="proceso-subtitulo">OFICINAS</h4>
-            <div class="proceso-galeria">
-                <img src="img/i26.jpg" alt="Mantenimiento">
-                <img src="img/i27.jpg" alt="Mantenimiento">
-                <img src="img/i29.jpg" alt="Mantenimiento">
-                <img src="img/i30.png" alt="Mantenimiento">
+        </div>
+    </section>
+
+    <section class="full-width-wrapper">
+        <h2 class="text-center mb-4 fw-bold">OFICINAS</h2>
+        <div class="carousel carousel--full" style="--slide-height: 380px; --slide-width: 100%;">
+            <div class="carousel-container">
+                <div class="swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"><img src="img/i26.jpg" alt="Oficina 1" loading="lazy"></div>
+                        <div class="swiper-slide"><img src="img/i27.jpg" alt="Oficina 2" loading="lazy"></div>
+                        <div class="swiper-slide"><img src="img/i29.jpg" alt="Oficina 3" loading="lazy"></div>
+                        <div class="swiper-slide"><img src="img/i30.png" alt="Oficina 4" loading="lazy"></div>
+                    </div>
+                </div>
             </div>
-            <h4 class="proceso-subtitulo">JARDINES</h4>
-            <div class="proceso-galeria">
-                <img src="img/i21.jpg" alt="Mantenimiento">
-                <img src="img/i22.jpg" alt="Mantenimiento">
-            </div>
-            <h4 class="proceso-subtitulo">ESTACIONAMIENTOS</h4>
-            <div class="proceso-galeria">
-                <img src="img/i28.jpg" alt="Mantenimiento">
+        </div>
+    </section>
+
+    <section class="full-width-wrapper">
+        <h2 class="text-center mb-4 fw-bold">EXTERIORES</h2>
+        <div class="carousel carousel--full" style="--slide-height: 380px; --slide-width: 100%;">
+            <div class="carousel-container">
+                <div class="swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"><img src="img/i21.jpg" alt="Exterior 1" loading="lazy"></div>
+                        <div class="swiper-slide"><img src="img/i22.jpg" alt="Exterior 2" loading="lazy"></div>
+                        <div class="swiper-slide"><img src="img/i28.jpg" alt="Exterior 3" loading="lazy"></div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -186,121 +255,52 @@
         AOS.init();
     </script>
 
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <!-- SECCIÓN PROCESO (vacía, por si luego agregas contenido) -->
+    <section class="proceso-section container my-1"></section>
+
+    <!-- Swiper JS (necesario) -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Tu JS (pon tu <script src="app.js"> si lo separas) -->
+    <script src="app.js"></script>
     <script>
-        const swiper = new Swiper('.mySwiper', {
-            loop: true,
-            spaceBetween: 30,
-            navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
-            },
-            autoplay: {
-                delay: 3000,
-                disableOnInteraction: false,
-            },
-            breakpoints: {
-                0: {
-                    slidesPerView: 1,
-                    slidesPerGroup: 1
+        // Inicializa todos los carruseles .carousel de la página
+        document.querySelectorAll('.carousel').forEach((carousel) => {
+            const swiperEl = carousel.querySelector('.swiper');
+            const prevBtn = carousel.querySelector('.btn-prev');
+            const nextBtn = carousel.querySelector('.btn-next');
+
+            new Swiper(swiperEl, {
+                loop: true,
+                spaceBetween: 30,
+                navigation: {
+                    prevEl: prevBtn,
+                    nextEl: nextBtn,
                 },
-                768: {
-                    slidesPerView: 2,
-                    slidesPerGroup: 1
+                autoplay: {
+                    delay: 3000,
+                    disableOnInteraction: false,
                 },
-                992: {
-                    slidesPerView: 3,
-                    slidesPerGroup: 1
+                breakpoints: {
+                    0: {
+                        slidesPerView: 1,
+                        slidesPerGroup: 1
+                    },
+                    768: {
+                        slidesPerView: 2,
+                        slidesPerGroup: 1
+                    },
+                    992: {
+                        slidesPerView: 3,
+                        slidesPerGroup: 1
+                    },
                 }
-            }
+            });
         });
     </script>
 
-    <script>
-        const swiperVistas = new Swiper('.swiper-vistas', {
-            loop: true,
-            spaceBetween: 30,
-            navigation: {
-                nextEl: '.vistas-button-next',
-                prevEl: '.vistas-button-prev',
-            },
-            autoplay: {
-                delay: 3000,
-                disableOnInteraction: false,
-            },
-            breakpoints: {
-                0: {
-                    slidesPerView: 1,
-                    slidesPerGroup: 1
-                },
-                768: {
-                    slidesPerView: 2,
-                    slidesPerGroup: 1
-                },
-                992: {
-                    slidesPerView: 3,
-                    slidesPerGroup: 1
-                }
-            }
-        });
-    </script>
-
-    <script>
-        const swiperVistas2 = new Swiper('.swiper-vistas2', {
-            loop: true,
-            spaceBetween: 30,
-            navigation: {
-                nextEl: '.vistas-button-next2',
-                prevEl: '.vistas-button-prev2',
-            },
-            autoplay: {
-                delay: 3000,
-                disableOnInteraction: false,
-            },
-            breakpoints: {
-                0: {
-                    slidesPerView: 1,
-                    slidesPerGroup: 1
-                },
-                768: {
-                    slidesPerView: 2,
-                    slidesPerGroup: 1
-                },
-                992: {
-                    slidesPerView: 3,
-                    slidesPerGroup: 1
-                }
-            }
-        });
-    </script>
-
-    <script>
-        const swiperVistas3 = new Swiper('.swiper-vistas3', {
-            loop: true,
-            spaceBetween: 30,
-            navigation: {
-                nextEl: '.vistas-button-next3',
-                prevEl: '.vistas-button-prev3',
-            },
-            autoplay: {
-                delay: 3000,
-                disableOnInteraction: false,
-            },
-            breakpoints: {
-                0: {
-                    slidesPerView: 1,
-                    slidesPerGroup: 1
-                },
-                768: {
-                    slidesPerView: 2,
-                    slidesPerGroup: 1
-                },
-                992: {
-                    slidesPerView: 3,
-                    slidesPerGroup: 1
-                }
-            }
-        });
-    </script>
 
 </body>
 
