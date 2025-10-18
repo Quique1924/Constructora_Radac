@@ -851,7 +851,7 @@ hr {
         flex-direction: column;
     }
     .footer-imagen {
-        height: auto;
+        height: 300;
     }
 }
 
