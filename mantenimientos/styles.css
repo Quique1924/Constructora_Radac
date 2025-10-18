@@ -196,6 +196,42 @@ body {
 }
 
 
+/* Logo tipo botón */
+
+.logo-btn {
+    height: 60px;
+    /* ajusta el tamaño */
+    width: auto;
+    /* mantiene proporción */
+    cursor: pointer;
+    /* efecto "botón" */
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+
+/* Efecto hover */
+
+.logo-btn:hover {
+    transform: scale(1.05);
+    /* pequeño zoom */
+    opacity: 0.9;
+    /* leve transparencia */
+}
+
+
+/* Ajuste de margen si lo usas dentro de una navbar */
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    padding: 0;
+}
+
+.marca-radac {
+    text-decoration: none;
+}
+
+
 /* SECCIÓN PROYECTO */
 
 .proyecto-section {
