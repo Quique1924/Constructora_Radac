@@ -7,27 +7,29 @@
 /* ===================== */
 
 :root {
-    /* se setea dinámicamente en JS con la altura real del header */
-    --header-h: 50px;
+    /* Altura base de tu header */
+    --header-h: 10px;
+    /* Margen extra opcional (puede ser negativo si quieres menos espacio) */
+    --anchor-extra-space: -42px;
 }
 
 
-/* Scroll suave y offset para TODAS las anclas (#...) */
+/* Scroll suave y offset global */
 
 html {
     scroll-behavior: smooth;
-    scroll-padding-top: var(--header-h);
+    scroll-padding-top: calc(var(--header-h) + var(--anchor-extra-space));
 }
 
 
-/* margen adicional para objetivos de ancla (por si el id está en un contenedor interno) */
+/* Margen para IDs individuales */
 
 *[id] {
-    scroll-margin-top: var(--header-h);
+    scroll-margin-top: calc(var(--header-h) + var(--anchor-extra-space));
 }
 
 
-/* Fallback por si algún navegador ignora lo anterior */
+/* Fallback por compatibilidad */
 
 *[id]::before {
     content: "";
@@ -54,8 +56,8 @@ html {
 
 .custom-navbar {
     background-color: #8d8d8e !important;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding-top: 5px;
+    padding-bottom: 10px;
 }
 
 
@@ -322,6 +324,90 @@ body {
 
 .marca-radac {
     text-decoration: none;
+}
+
+
+/* ======= NAVBAR AUTO-OCULTABLE ======= */
+
+.header-fixed-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    transition: transform 0.4s ease-in-out, opacity 0.3s ease-in-out;
+    z-index: 9999;
+}
+
+
+/* Estado visible */
+
+.header-fixed-container.show {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+
+/* Estado oculto */
+
+.header-fixed-container.hide {
+    transform: translateY(-100%);
+    opacity: 0;
+}
+
+
+/* Mantener visible si el cursor está arriba del todo */
+
+.header-fixed-container.visible-hover {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+
+/* Fondo semitransparente elegante (opcional) */
+
+.custom-navbar {
+    background-color: rgba(141, 141, 142, 0.95) !important;
+    backdrop-filter: blur(8px);
+}
+
+
+/* Evitar que el contenido quede oculto bajo la barra */
+
+body {
+    padding-top: 100px;
+}
+
+
+/* === LOGO CHAMBIN (ANTES DEL LOGO PRINCIPAL) === */
+
+.logo-chambin {
+    height: 65px;
+    /* ✅ Ajusta la altura aquí */
+    width: auto;
+    /* mantiene la proporción */
+    margin-right: 10px;
+    /* espacio entre los dos logos */
+    transition: transform 0.2s ease, opacity 0.2s ease;
+    cursor: pointer;
+}
+
+
+/* Efecto al pasar el cursor */
+
+.logo-chambin:hover {
+    transform: scale(1.05);
+    opacity: 0.9;
+}
+
+
+/* Ajuste para dispositivos móviles */
+
+@media (max-width: 768px) {
+    .logo-chambin {
+        height: 60px;
+        /* un poco más pequeño en móviles */
+        margin-right: 8px;
+    }
 }
 
 

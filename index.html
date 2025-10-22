@@ -26,6 +26,7 @@
             <nav class="navbar navbar-expand-lg navbar-dark custom-navbar px-4 shadow-sm">
 
                 <a class="navbar-brand marca-radac" href="index.html">
+                    <img src="img/chambin.png" alt="Chambin" class="logo-chambin">
                     <img src="img/LOGO RADAC BLANCO-1.png" alt="Constructora RADAC" class="logo-btn">
                 </a>
 
@@ -237,7 +238,7 @@
             <div class="footer-item-dark">
                 <h4>ÚNETE A NUESTRO GRUPO</h4>
                 <p>Recibe novedades y promociones.</p>
-                <a href="https://chat.whatsapp.com/DwtreC7Pe4PIHgPewAkbWo?mode=ems_copy_t" class="footer-btn-dark">
+                <a href="#" class="footer-btn-dark" id="waFooterLink">
                     <i class="ri-group-line"></i> Ir al chat
                 </a>
             </div>
@@ -248,8 +249,8 @@
                 <h4>¿DÓNDE LOCALIZARNOS?</h4>
                 <p>Tlaxcala, Tlax.</p>
                 <a href="https://maps.app.goo.gl/zM2QDK8e5hbQGENf9" class="footer-link-dark" target="_blank">
-        Calle 5 de Mayo Ote., Barrio de Tecpa Morales, 90833 Tlaxcala
-      </a>
+                    Calle 5 de Mayo Ote., Barrio de Tecpa Morales, 90833 Tlaxcala
+                </a>
             </div>
 
             <!-- Contacto y Redes -->
@@ -277,7 +278,7 @@
     </footer>
 
     <!-- Botón flotante de WhatsApp -->
-    <a href="https://chat.whatsapp.com/DwtreC7Pe4PIHgPewAkbWo?mode=ems_copy_t" class="whatsapp-float" target="_blank" title="Chatea con nosotros en WhatsApp y descubre novedades y promociones">
+    <a href="#" class="whatsapp-float" id="waFloatLink" target="_blank" title="Chatea con nosotros en WhatsApp y descubre novedades y promociones">
         <img src="https://img.icons8.com/color/200/whatsapp--v1.png" alt="WhatsApp" class="whatsapp-icon">
     </a>
 
@@ -339,6 +340,93 @@
     <script>
         AOS.init();
     </script>
+
+    <!-- Botón flotante de WhatsApp -->
+    <script>
+        (function() {
+            // === CONFIGURA AQUÍ ===
+            // Pon tu número móvil local de 10 dígitos (sin espacios). EJEMPLO: "2461801208"
+            const LOCAL_NUMBER = "2461801208"; // <-- AJÚSTALO (tu mensaje puso 246181208, parece faltar dígitos)
+            const COUNTRY_CODE = "52"; // MX
+            const MOBILE_PREFIX = "1"; // Requerido para móviles en MX
+
+            // Construye phone en formato internacional sin "+"
+            const PHONE = COUNTRY_CODE + MOBILE_PREFIX + LOCAL_NUMBER;
+
+            // Usa api.whatsapp.com (sirve en móvil y en web/desktop)
+            const waURL = `https://api.whatsapp.com/send?phone=${PHONE}`;
+
+            // Aplica el link a ambos botones
+            const floatLink = document.getElementById('waFloatLink');
+            const footerLink = document.getElementById('waFooterLink');
+            if (floatLink) floatLink.href = waURL;
+            if (footerLink) footerLink.href = waURL;
+
+            // Opcional: abrir en nueva pestaña también para el del footer
+            if (footerLink) footerLink.setAttribute('target', '_blank');
+        })();
+    </script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const header = document.querySelector(".header-fixed-container");
+            let lastScrollY = window.scrollY;
+
+            // Detectar movimiento del mouse
+            let mouseY = 0;
+            document.addEventListener("mousemove", (e) => {
+                mouseY = e.clientY;
+                // Si el cursor está cerca del borde superior (por ejemplo, los primeros 80px)
+                if (mouseY < 80) {
+                    header.classList.add("visible-hover");
+                } else {
+                    header.classList.remove("visible-hover");
+                }
+            });
+
+            // Detectar scroll
+            window.addEventListener("scroll", () => {
+                // Si estamos al inicio, siempre visible
+                if (window.scrollY <= 50) {
+                    header.classList.remove("hide");
+                    header.classList.add("show");
+                    return;
+                }
+
+                // Si hace scroll hacia abajo → ocultar
+                if (window.scrollY > lastScrollY) {
+                    header.classList.add("hide");
+                    header.classList.remove("show");
+                } else {
+                    // Si hace scroll hacia arriba → mostrar
+                    header.classList.remove("hide");
+                    header.classList.add("show");
+                }
+
+                lastScrollY = window.scrollY;
+            });
+        });
+    </script>
+
+    <script>
+        function setHeaderOffset() {
+            const header = document.querySelector('.header-fixed-container');
+            if (!header) return;
+            const h = header.offsetHeight; // altura real
+            document.documentElement.style.setProperty('--header-h', h + 'px');
+            document.body.style.paddingTop = h + 'px'; // por si acaso
+        }
+
+        // Calcular al cargar y al redimensionar
+        window.addEventListener('DOMContentLoaded', setHeaderOffset);
+        window.addEventListener('load', setHeaderOffset);
+        window.addEventListener('resize', setHeaderOffset);
+
+        // Si usas Bootstrap, recalcula cuando se abre/cierra el menú colapsable
+        document.addEventListener('shown.bs.collapse', setHeaderOffset);
+        document.addEventListener('hidden.bs.collapse', setHeaderOffset);
+    </script>
+
 
 </body>
 
