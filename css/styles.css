@@ -151,10 +151,90 @@ body {
         margin: 10px 0;
         text-align: center;
     }
+    .btn-cotizar {
+        margin: 10px 0;
+        text-align: center;
+    }
     .custom-navbar {
         background-color: #8d8d8e !important;
         padding-top: 25px;
         padding-bottom: 20px;
+    }
+}
+
+
+/* ============
+   Mobile drawer
+   ============ */
+
+:root {
+    /* alto de la franja superior (logo + hamburguesa) en móvil */
+    --mobile-top: 76px;
+    /* ancho del panel: cámbialo a 70vw, 320px, etc. */
+    --mobile-drawer-width: min(82vw, 300px);
+}
+
+
+/* MÓVIL: no empujar contenido ni aplicar offset de ancla */
+
+@media (max-width: 991.98px) {
+    html {
+        scroll-padding-top: 0;
+    }
+    *[id] {
+        scroll-margin-top: 0;
+    }
+    body {
+        padding-top: 0;
+    }
+    /* Header fijo arriba como base */
+    .header-fixed-container {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1000;
+    }
+    .custom-navbar {
+        padding: 8px 0;
+    }
+    /* Drawer lateral usando el propio .navbar-collapse de Bootstrap */
+    .navbar-collapse {
+        position: fixed;
+        top: var(--mobile-top);
+        right: 0;
+        width: var(--mobile-drawer-width);
+        background: rgba(148, 148, 150, 0.964);
+        box-shadow: -8px 0 24px rgba(0, 0, 0, 0);
+        padding: 30px;
+        /* ✅ Agregamos padding-bottom para el espacio extra */
+        padding-bottom: 20px;
+        overflow: visible;
+        /* ya no necesitas scroll */
+        z-index: 1100;
+        transform: translateX(100%);
+        transition: transform .28s ease;
+        display: block !important;
+    }
+    /* Estados del colapso (aprovechando clases de Bootstrap) */
+    .navbar-collapse.show {
+        transform: translateX(0);
+    }
+    .navbar-collapse.collapsing {
+        height: calc(100vh - var(--mobile-top));
+        transform: translateX(0);
+        /* para que la animación sea fluida */
+    }
+    /* Estética de opciones */
+    .navbar .nav-link {
+        font-size: 1.05rem;
+        padding: .6rem 0;
+        text-align: center;
+    }
+    .btn-cotizar {
+        display: block;
+        width: 90%;
+        margin-top: 8px;
     }
 }
 
