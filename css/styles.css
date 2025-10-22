@@ -220,11 +220,6 @@ body {
     .navbar-collapse.show {
         transform: translateX(0);
     }
-    .navbar-collapse.collapsing {
-        height: calc(100vh - var(--mobile-top));
-        transform: translateX(0);
-        /* para que la animación sea fluida */
-    }
     /* Estética de opciones */
     .navbar .nav-link {
         font-size: 1.05rem;
@@ -235,6 +230,47 @@ body {
         display: block;
         width: 90%;
         margin-top: 8px;
+    }
+}
+
+
+/* MÓVIL: drawer lateral sin ocupar toda la pantalla */
+
+@media (max-width: 991.98px) {
+    .navbar-collapse {
+        position: fixed;
+        top: var(--mobile-top);
+        right: 0;
+        width: var(--mobile-drawer-width);
+        background: rgba(148, 148, 150, 0.964);
+        box-shadow: -8px 0 24px rgba(0, 0, 0, 0.15);
+        padding: 24px 30px 28px;
+        /* alto definido por contenido */
+        display: block !important;
+        /* evita display:none del collapse */
+        transform: translateX(100%);
+        /* oculto por defecto */
+        transition: transform .28s ease;
+        z-index: 1100;
+        height: auto;
+        /* ¡nada de 100vh! */
+        overflow: visible;
+    }
+    /* Visible (abierto) */
+    .navbar-collapse.show {
+        transform: translateX(0);
+    }
+    /* Durante la animación de cierre: mantenerlo fuera */
+    .navbar-collapse.collapsing {
+        transform: translateX(100%);
+        height: auto;
+        /* sin animar la altura */
+        overflow: hidden;
+        /* por si acaso */
+    }
+    /* Asegura que cuando NO esté en show, esté fuera */
+    .navbar-collapse:not(.show) {
+        transform: translateX(100%);
     }
 }
 
@@ -455,39 +491,6 @@ body {
 
 body {
     padding-top: 100px;
-}
-
-
-/* === LOGO CHAMBIN (ANTES DEL LOGO PRINCIPAL) === */
-
-.logo-chambin {
-    height: 65px;
-    /* ✅ Ajusta la altura aquí */
-    width: auto;
-    /* mantiene la proporción */
-    margin-right: 10px;
-    /* espacio entre los dos logos */
-    transition: transform 0.2s ease, opacity 0.2s ease;
-    cursor: pointer;
-}
-
-
-/* Efecto al pasar el cursor */
-
-.logo-chambin:hover {
-    transform: scale(1.05);
-    opacity: 0.9;
-}
-
-
-/* Ajuste para dispositivos móviles */
-
-@media (max-width: 768px) {
-    .logo-chambin {
-        height: 60px;
-        /* un poco más pequeño en móviles */
-        margin-right: 8px;
-    }
 }
 
 
