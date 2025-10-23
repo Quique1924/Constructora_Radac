@@ -370,12 +370,26 @@
             const header = document.querySelector(".header-fixed-container");
             let lastScrollY = window.scrollY;
 
+            // Variable que define el rango superior dinámico
+            let hoverThreshold = 80;
+
+            // Referencia al dropdown de Bootstrap
+            const dropdownToggles = document.querySelectorAll('.nav-item.dropdown .dropdown-toggle');
+
+            // Escuchar apertura y cierre del menú desplegable
+            dropdownToggles.forEach((toggle) => {
+                toggle.addEventListener('show.bs.dropdown', () => {
+                    hoverThreshold = 250; // 🔼 cuando el dropdown está abierto
+                });
+                toggle.addEventListener('hide.bs.dropdown', () => {
+                    hoverThreshold = 80; // 🔽 vuelve al valor normal
+                });
+            });
+
             // Detectar movimiento del mouse
-            let mouseY = 0;
             document.addEventListener("mousemove", (e) => {
-                mouseY = e.clientY;
-                // Si el cursor está cerca del borde superior (por ejemplo, los primeros 80px)
-                if (mouseY < 80) {
+                const mouseY = e.clientY;
+                if (mouseY < hoverThreshold) {
                     header.classList.add("visible-hover");
                 } else {
                     header.classList.remove("visible-hover");
@@ -384,19 +398,16 @@
 
             // Detectar scroll
             window.addEventListener("scroll", () => {
-                // Si estamos al inicio, siempre visible
                 if (window.scrollY <= 50) {
                     header.classList.remove("hide");
                     header.classList.add("show");
                     return;
                 }
 
-                // Si hace scroll hacia abajo → ocultar
                 if (window.scrollY > lastScrollY) {
                     header.classList.add("hide");
                     header.classList.remove("show");
                 } else {
-                    // Si hace scroll hacia arriba → mostrar
                     header.classList.remove("hide");
                     header.classList.add("show");
                 }
