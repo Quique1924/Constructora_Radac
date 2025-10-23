@@ -698,7 +698,7 @@ body {
 /* SECCIÓN DE CONTACTO */
 
 .seccion-contacto {
-    padding: 50px 20px;
+    padding: 70px 20px;
     background-color: #eef0f6;
     font-family: 'Poppins', sans-serif;
 }
@@ -872,7 +872,7 @@ hr {
 
 .footer-dark {
     background-color: #1e1e1e;
-    padding: 20px 20px;
+    padding: 27px 20px;
     font-family: 'Poppins', sans-serif;
     color: #ccc;
     text-align: center;

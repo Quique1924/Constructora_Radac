@@ -499,7 +499,7 @@ body {
 .hero-section {
     position: relative;
     width: 100%;
-    min-height: 90vh;
+    min-height: 92vh;
     overflow: hidden;
     display: flex;
     align-items: center;
