@@ -322,6 +322,120 @@
         });
     </script>
 
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const header = document.querySelector(".header-fixed-container");
+            let lastScrollY = window.scrollY;
+
+            // Detectar movimiento del mouse
+            let mouseY = 0;
+            document.addEventListener("mousemove", (e) => {
+                mouseY = e.clientY;
+                // Si el cursor está cerca del borde superior (por ejemplo, los primeros 80px)
+                if (mouseY < 80) {
+                    header.classList.add("visible-hover");
+                } else {
+                    header.classList.remove("visible-hover");
+                }
+            });
+
+            // Detectar scroll
+            window.addEventListener("scroll", () => {
+                // Si estamos al inicio, siempre visible
+                if (window.scrollY <= 50) {
+                    header.classList.remove("hide");
+                    header.classList.add("show");
+                    return;
+                }
+
+                // Si hace scroll hacia abajo → ocultar
+                if (window.scrollY > lastScrollY) {
+                    header.classList.add("hide");
+                    header.classList.remove("show");
+                } else {
+                    // Si hace scroll hacia arriba → mostrar
+                    header.classList.remove("hide");
+                    header.classList.add("show");
+                }
+
+                lastScrollY = window.scrollY;
+            });
+        });
+    </script>
+
+    <script>
+        function setHeaderOffset() {
+            const header = document.querySelector('.header-fixed-container');
+            if (!header) return;
+            const h = header.offsetHeight; // altura real
+            document.documentElement.style.setProperty('--header-h', h + 'px');
+            document.body.style.paddingTop = h + 'px'; // por si acaso
+        }
+
+        // Calcular al cargar y al redimensionar
+        window.addEventListener('DOMContentLoaded', setHeaderOffset);
+        window.addEventListener('load', setHeaderOffset);
+        window.addEventListener('resize', setHeaderOffset);
+
+        // Si usas Bootstrap, recalcula cuando se abre/cierra el menú colapsable
+        document.addEventListener('shown.bs.collapse', setHeaderOffset);
+        document.addEventListener('hidden.bs.collapse', setHeaderOffset);
+    </script>
+
+    <script>
+        (function() {
+            const header = document.querySelector('.header-fixed-container');
+            if (!header) return;
+
+            // 1) Calcular altura real del header para el offset
+            function setHeaderOffset() {
+                const h = header.offsetHeight;
+                document.documentElement.style.setProperty('--header-h', h + 'px');
+                document.body.style.paddingTop = h + 'px';
+            }
+            window.addEventListener('DOMContentLoaded', setHeaderOffset);
+            window.addEventListener('load', setHeaderOffset);
+            window.addEventListener('resize', setHeaderOffset);
+            // Si usas Bootstrap collapse:
+            document.addEventListener('shown.bs.collapse', setHeaderOffset);
+            document.addEventListener('hidden.bs.collapse', setHeaderOffset);
+
+            // 2) Lógica de auto-ocultar/mostrar por scroll
+            let lastY = window.scrollY;
+            window.addEventListener('scroll', () => {
+                const y = window.scrollY;
+
+                // Siempre visible arriba del todo
+                if (y <= 50) {
+                    header.classList.remove('hide');
+                    header.classList.add('show');
+                    return;
+                }
+
+                // Scroll hacia abajo -> ocultar
+                if (y > lastY) {
+                    header.classList.add('hide');
+                    header.classList.remove('show');
+                } else {
+                    // Scroll hacia arriba -> mostrar
+                    header.classList.remove('hide');
+                    header.classList.add('show');
+                }
+                lastY = y;
+            }, {
+                passive: true
+            });
+
+            // 3) Mostrar al acercar el cursor a la parte superior (estilo Windows)
+            document.addEventListener('mousemove', (e) => {
+                if (e.clientY < 80) {
+                    header.classList.add('visible-hover');
+                } else {
+                    header.classList.remove('visible-hover');
+                }
+            });
+        })();
+    </script>
 </body>
 
 </html>

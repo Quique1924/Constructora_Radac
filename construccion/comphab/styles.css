@@ -1,3 +1,44 @@
+/* ===================== */
+
+
+/* Header fijo y Navbar  */
+
+
+/* ===================== */
+
+:root {
+    /* Altura base de tu header */
+    --header-h: 10px;
+    /* Margen extra opcional (puede ser negativo si quieres menos espacio) */
+    --anchor-extra-space: -42px;
+}
+
+
+/* Scroll suave y offset global */
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: calc(var(--header-h) + var(--anchor-extra-space));
+}
+
+
+/* Margen para IDs individuales */
+
+*[id] {
+    scroll-margin-top: calc(var(--header-h) + var(--anchor-extra-space));
+}
+
+
+/* Fallback por compatibilidad */
+
+*[id]::before {
+    content: "";
+    display: block;
+    height: 0;
+    margin-top: 0;
+}
+
+
 /* Fijar el header */
 
 .header-fixed-container {
@@ -15,15 +56,15 @@
 
 .custom-navbar {
     background-color: #8d8d8e !important;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding-top: 5px;
+    padding-bottom: 10px;
 }
 
 
 /* Para evitar que el contenido se esconda debajo del header fijo */
 
 body {
-    padding-top: 84px;
+    padding-top: 100px;
     /* ajusta según altura total del header */
 }
 
@@ -32,11 +73,32 @@ body {
 
 .navbar .nav-link {
     color: #ffffff;
-    margin: 0 10px;
+    margin: 0 0px;
     font-weight: 500;
 }
 
 .navbar .nav-link:hover {
+    color: #48587c;
+}
+
+
+/* Estilo personalizado para el dropdown */
+
+.dropdown-menu {
+    background-color: #ffffff;
+    border-radius: 0.5rem;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown-item {
+    color: #313c56;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    transition: background-color 0.2s ease;
+}
+
+.dropdown-item:hover {
+    background-color: #f1f1f1;
     color: #48587c;
 }
 
@@ -89,10 +151,126 @@ body {
         margin: 10px 0;
         text-align: center;
     }
+    .btn-cotizar {
+        margin: 10px 0;
+        text-align: center;
+    }
     .custom-navbar {
         background-color: #8d8d8e !important;
         padding-top: 25px;
         padding-bottom: 20px;
+    }
+}
+
+
+/* ============
+   Mobile drawer
+   ============ */
+
+:root {
+    /* alto de la franja superior (logo + hamburguesa) en móvil */
+    --mobile-top: 76px;
+    /* ancho del panel: cámbialo a 70vw, 320px, etc. */
+    --mobile-drawer-width: min(82vw, 300px);
+}
+
+
+/* MÓVIL: no empujar contenido ni aplicar offset de ancla */
+
+@media (max-width: 991.98px) {
+    html {
+        scroll-padding-top: 0;
+    }
+    *[id] {
+        scroll-margin-top: 0;
+    }
+    body {
+        padding-top: 0;
+    }
+    /* Header fijo arriba como base */
+    .header-fixed-container {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1000;
+    }
+    .custom-navbar {
+        padding: 8px 0;
+    }
+    /* Drawer lateral usando el propio .navbar-collapse de Bootstrap */
+    .navbar-collapse {
+        position: fixed;
+        top: var(--mobile-top);
+        right: 0;
+        width: var(--mobile-drawer-width);
+        background: rgba(148, 148, 150, 0.964);
+        box-shadow: -8px 0 24px rgba(0, 0, 0, 0);
+        padding: 30px;
+        /* ✅ Agregamos padding-bottom para el espacio extra */
+        padding-bottom: 20px;
+        overflow: visible;
+        /* ya no necesitas scroll */
+        z-index: 1100;
+        transform: translateX(100%);
+        transition: transform .28s ease;
+        display: block !important;
+    }
+    /* Estados del colapso (aprovechando clases de Bootstrap) */
+    .navbar-collapse.show {
+        transform: translateX(0);
+    }
+    /* Estética de opciones */
+    .navbar .nav-link {
+        font-size: 1.05rem;
+        padding: .6rem 0;
+        text-align: center;
+    }
+    .btn-cotizar {
+        display: block;
+        width: 90%;
+        margin-top: 8px;
+    }
+}
+
+
+/* MÓVIL: drawer lateral sin ocupar toda la pantalla */
+
+@media (max-width: 991.98px) {
+    .navbar-collapse {
+        position: fixed;
+        top: var(--mobile-top);
+        right: 0;
+        width: var(--mobile-drawer-width);
+        background: rgba(148, 148, 150, 0.964);
+        box-shadow: -8px 0 24px rgba(0, 0, 0, 0.15);
+        padding: 24px 30px 28px;
+        /* alto definido por contenido */
+        display: block !important;
+        /* evita display:none del collapse */
+        transform: translateX(100%);
+        /* oculto por defecto */
+        transition: transform .28s ease;
+        z-index: 1100;
+        height: auto;
+        /* ¡nada de 100vh! */
+        overflow: visible;
+    }
+    /* Visible (abierto) */
+    .navbar-collapse.show {
+        transform: translateX(0);
+    }
+    /* Durante la animación de cierre: mantenerlo fuera */
+    .navbar-collapse.collapsing {
+        transform: translateX(100%);
+        height: auto;
+        /* sin animar la altura */
+        overflow: hidden;
+        /* por si acaso */
+    }
+    /* Asegura que cuando NO esté en show, esté fuera */
+    .navbar-collapse:not(.show) {
+        transform: translateX(100%);
     }
 }
 
@@ -1266,4 +1444,75 @@ html,
 body {
     max-width: 100%;
     overflow-x: hidden;
+}
+
+
+/* === Auto-ocultar navbar === */
+
+.header-fixed-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
+    transition: transform .4s ease-in-out, opacity .3s ease-in-out;
+    will-change: transform, opacity;
+}
+
+
+/* visible por scroll o hover */
+
+.header-fixed-container.show {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+
+/* oculto por scroll hacia abajo */
+
+.header-fixed-container.hide {
+    transform: translateY(-100%);
+    opacity: 0;
+}
+
+
+/* visible si el cursor está en la franja superior */
+
+.header-fixed-container.visible-hover {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+
+/* Fondo elegante opcional */
+
+.custom-navbar {
+    background-color: rgba(141, 141, 142, .95) !important;
+    backdrop-filter: blur(8px);
+}
+
+
+/* Usa la altura real del header como offset y NO un número fijo */
+
+:root {
+    --header-h: 60px;
+}
+
+html {
+    scroll-padding-top: var(--header-h);
+}
+
+*[id] {
+    scroll-margin-top: var(--header-h);
+}
+
+body {
+    padding-top: var(--header-h);
+}
+
+
+/* Evitar separación con el hero */
+
+.hero-section {
+    margin-top: 0;
 }

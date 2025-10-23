@@ -56,8 +56,7 @@
                         </li>
                         <li class="nav-item"><a class="nav-link" href="../#ubicacion">UBICACIÓN</a></li>
                     </ul>
-                    <a href="../#contacto" class="btn btn-cotizar ms-3">Cotizar</a>
-
+                    <a href="../#contacto" class="btn btn-cotizar ms-3">COTIZAR</a>
                 </div>
             </nav>
         </header>
@@ -144,13 +143,11 @@
                 <img src="img/es5.jpg" alt="Mantenimiento">
             </div>
         </div>
-        </div>
     </section>
 
 
     <!--==================== FOOTER MODERNO ====================-->
     <footer class="footer-dark">
-        </div>
         <!-- Crédito Final -->
         <div class="footer-credit">
             © 2025 Constructora RADAC. Todos los derechos reservados.
@@ -170,120 +167,60 @@
     </script>
 
     <script>
-        const swiper = new Swiper('.mySwiper', {
-            loop: true,
-            spaceBetween: 30,
-            navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
-            },
-            autoplay: {
-                delay: 3000,
-                disableOnInteraction: false,
-            },
-            breakpoints: {
-                0: {
-                    slidesPerView: 1,
-                    slidesPerGroup: 1
-                },
-                768: {
-                    slidesPerView: 2,
-                    slidesPerGroup: 1
-                },
-                992: {
-                    slidesPerView: 3,
-                    slidesPerGroup: 1
-                }
+        (function() {
+            const header = document.querySelector('.header-fixed-container');
+            if (!header) return;
+
+            // 1) Calcular altura real del header para el offset
+            function setHeaderOffset() {
+                const h = header.offsetHeight;
+                document.documentElement.style.setProperty('--header-h', h + 'px');
+                document.body.style.paddingTop = h + 'px';
             }
-        });
+            window.addEventListener('DOMContentLoaded', setHeaderOffset);
+            window.addEventListener('load', setHeaderOffset);
+            window.addEventListener('resize', setHeaderOffset);
+            // Si usas Bootstrap collapse:
+            document.addEventListener('shown.bs.collapse', setHeaderOffset);
+            document.addEventListener('hidden.bs.collapse', setHeaderOffset);
+
+            // 2) Lógica de auto-ocultar/mostrar por scroll
+            let lastY = window.scrollY;
+            window.addEventListener('scroll', () => {
+                const y = window.scrollY;
+
+                // Siempre visible arriba del todo
+                if (y <= 50) {
+                    header.classList.remove('hide');
+                    header.classList.add('show');
+                    return;
+                }
+
+                // Scroll hacia abajo -> ocultar
+                if (y > lastY) {
+                    header.classList.add('hide');
+                    header.classList.remove('show');
+                } else {
+                    // Scroll hacia arriba -> mostrar
+                    header.classList.remove('hide');
+                    header.classList.add('show');
+                }
+                lastY = y;
+            }, {
+                passive: true
+            });
+
+            // 3) Mostrar al acercar el cursor a la parte superior (estilo Windows)
+            document.addEventListener('mousemove', (e) => {
+                if (e.clientY < 80) {
+                    header.classList.add('visible-hover');
+                } else {
+                    header.classList.remove('visible-hover');
+                }
+            });
+        })();
     </script>
 
-    <script>
-        const swiperVistas = new Swiper('.swiper-vistas', {
-            loop: true,
-            spaceBetween: 30,
-            navigation: {
-                nextEl: '.vistas-button-next',
-                prevEl: '.vistas-button-prev',
-            },
-            autoplay: {
-                delay: 3000,
-                disableOnInteraction: false,
-            },
-            breakpoints: {
-                0: {
-                    slidesPerView: 1,
-                    slidesPerGroup: 1
-                },
-                768: {
-                    slidesPerView: 2,
-                    slidesPerGroup: 1
-                },
-                992: {
-                    slidesPerView: 3,
-                    slidesPerGroup: 1
-                }
-            }
-        });
-    </script>
-
-    <script>
-        const swiperVistas2 = new Swiper('.swiper-vistas2', {
-            loop: true,
-            spaceBetween: 30,
-            navigation: {
-                nextEl: '.vistas-button-next2',
-                prevEl: '.vistas-button-prev2',
-            },
-            autoplay: {
-                delay: 3000,
-                disableOnInteraction: false,
-            },
-            breakpoints: {
-                0: {
-                    slidesPerView: 1,
-                    slidesPerGroup: 1
-                },
-                768: {
-                    slidesPerView: 2,
-                    slidesPerGroup: 1
-                },
-                992: {
-                    slidesPerView: 3,
-                    slidesPerGroup: 1
-                }
-            }
-        });
-    </script>
-
-    <script>
-        const swiperVistas3 = new Swiper('.swiper-vistas3', {
-            loop: true,
-            spaceBetween: 30,
-            navigation: {
-                nextEl: '.vistas-button-next3',
-                prevEl: '.vistas-button-prev3',
-            },
-            autoplay: {
-                delay: 3000,
-                disableOnInteraction: false,
-            },
-            breakpoints: {
-                0: {
-                    slidesPerView: 1,
-                    slidesPerGroup: 1
-                },
-                768: {
-                    slidesPerView: 2,
-                    slidesPerGroup: 1
-                },
-                992: {
-                    slidesPerView: 3,
-                    slidesPerGroup: 1
-                }
-            }
-        });
-    </script>
 
 </body>
 
