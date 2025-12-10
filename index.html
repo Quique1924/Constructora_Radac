@@ -6,13 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Constructora RADAC</title>
 
-    <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Remix Icon -->
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.min.css" rel="stylesheet" />
-    <!-- AOS Animation -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <!-- Estilos propios -->
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 
@@ -20,7 +16,6 @@
 
 <body>
 
-    <!-- HEADER -->
     <div class="header-fixed-container">
         <header class="main-header">
             <nav class="navbar navbar-expand-lg navbar-dark custom-navbar px-4 shadow-sm">
@@ -58,13 +53,10 @@
         </header>
     </div>
 
-    <!-- SECCIÓN HERO -->
     <section class="hero-section">
-        <!-- Fondo dinámico con opacidad -->
         <div class="hero-bg hero-bg-1"></div>
         <div class="hero-bg hero-bg-2"></div>
 
-        <!-- Overlay con contenido alineado a la izquierda -->
         <div class="hero-overlay">
             <div class="hero-contenedor">
                 <div class="hero-content" data-aos="fade-up">
@@ -81,17 +73,14 @@
         </div>
     </section>
 
-    <!-- SECCIÓN CONÓCENOS -->
     <section class="section-conocenos" id="conocenos">
         <div class="container"><br>
             <div class="row align-items-center">
 
-                <!-- Columna de imágenes -->
                 <div class="col-lg-6 columna-imagen" data-aos="fade-right">
                     <img src="img/años.png" alt="Obra 1"><br><br>
                 </div>
 
-                <!-- Columna de texto -->
                 <div class="col-lg-6 columna-texto" data-aos="fade-left">
                     <h1 class="titulo-fondo">CONÓCENOS</h1>
                     <h3 class="subtitulo">ESPECIALISTAS EN CONSTRUCCIÓN Y DISEÑO ARQUITECTÓNICO</h3>
@@ -107,17 +96,14 @@
         </div>
     </section>
 
-    <!-- SECCIÓN DE SERVICIOS CON FONDO NEGRO -->
     <section class="contenedor-servicios py-1">
         <div class="container" id="servicios">
 
-            <!-- TÍTULO DE LA SECCIÓN -->
             <div class="text-center mb-5">
                 <h2 class="titulo-servicios">NUESTROS SERVICIOS</h2>
             </div>
 
             <div class="row text-center justify-content-center">
-                <!-- Servicio 1 -->
                 <div class="col-12 col-sm-6 col-lg-3 mb-5" data-aos="fade-up">
                     <a href="construccion/index.html" class="servicio-link">
                         <div class="servicio-box">
@@ -131,7 +117,6 @@
                     </a>
                 </div>
 
-                <!-- Servicio 2 -->
                 <div class="col-12 col-sm-6 col-lg-3 mb-5" data-aos="fade-down">
                     <a href="remodelacion/index.html" class="servicio-link">
                         <div class="servicio-box">
@@ -145,7 +130,6 @@
                     </a>
                 </div>
 
-                <!-- Servicio 3 -->
                 <div class="col-12 col-sm-6 col-lg-3 mb-5" data-aos="fade-up">
                     <a href="mantenimientos/index.html" class="servicio-link">
                         <div class="servicio-box">
@@ -159,7 +143,6 @@
                     </a>
                 </div>
 
-                <!-- Servicio 4 -->
                 <div class="col-12 col-sm-6 col-lg-3 mb-5" data-aos="fade-down">
                     <a href="renderizados/index.html" class="servicio-link">
                         <div class="servicio-box">
@@ -176,10 +159,8 @@
         </div>
     </section>
 
-    <!--==================== SECCIÓN DE CONTACTO ====================-->
     <section class="seccion-contacto" id="contacto">
         <div class="contenedor-contacto container">
-            <!-- FORMULARIO -->
             <div class="contacto-formulario-box">
                 <h1 class="contacto-titulo" style="text-align: center;">CONTÁCTANOS</h1><br><br>
                 <form action="https://formsubmit.co/joseenrique.radac@gmail.com" method="POST" class="formulario-contacto">
@@ -191,11 +172,9 @@
                     <input type="text" name="Empresa" placeholder="Empresa" />
                     <textarea name="Mensaje" placeholder="Mensaje" rows="4"></textarea>
 
-                    <!-- Opcionales -->
                     <input type="hidden" name="_subject" value="Nuevo mensaje desde el sitio web" />
                     <input type="hidden" name="_captcha" value="false" />
                     <input type="hidden" name="_next" value="https://tu-dominio.com/gracias.html" />
-                    <!-- Honeypot anti-spam -->
                     <input type="text" name="_honey" style="display:none">
 
                     <button type="submit">Enviar</button>
@@ -203,7 +182,6 @@
 
             </div>
 
-            <!-- INFORMACIÓN DE CONTACTO (IMAGEN / VIEDO DECORATIVO) -->
             <div class="contacto-imagen-box" data-aos="slide-left">
                 <video class="contacto-imagen" autoplay muted loop playsinline>
                     <source src="video/Chambin.mp4" type="video/mp4">
@@ -213,16 +191,13 @@
         </div>
     </section>
 
-    <!--==================== FOOTER MODERNO ====================-->
     <footer class="footer-dark">
         <div class="container footer-container" id="ubicacion">
 
-            <!-- Encabezado -->
             <div class="footer-titulo text-center">
                 <h2>CONSTRUCTORA <span>RADAC</span></h2>
             </div>
 
-            <!-- Mapa e Imagen lado a lado -->
             <div class="footer-mapa-contenedor">
                 <img src="img/fachada.jpg" alt="Imagen RADAC" class="footer-imagen">
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3767.498456424269!2d-98.2009506!3d19.2826637!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85cfddaf9032bd69%3A0x3518fbe8dd708572!2sConstructora%20RADAC!5e0!3m2!1ses-419!2smx!4v1720215600039!5m2!1ses-419!2smx"
@@ -233,7 +208,6 @@
         </div><br><br>
         <div class="container footer-grid-dark">
 
-            <!-- Grupo WhatsApp -->
             <div class="footer-item-dark">
                 <h4>ÚNETE A NUESTRO GRUPO</h4>
                 <p>Recibe novedades y promociones.</p>
@@ -243,7 +217,6 @@
             </div>
 
 
-            <!-- Dirección -->
             <div class="footer-item-dark">
                 <h4>¿DÓNDE LOCALIZARNOS?</h4>
                 <p>Tlaxcala, Tlax.</p>
@@ -252,7 +225,6 @@
                 </a>
             </div>
 
-            <!-- Contacto y Redes -->
             <div class="footer-item-dark">
                 <h4>CONTÁCTANOS</h4>
                 <p>+52 246 180 1208</p>
@@ -263,32 +235,27 @@
                 </div>
             </div>
 
-            <!-- Métodos de pago -->
             <div class="footer-item-dark">
                 <h4>MÉTODOS DE PAGO</h4>
                 <p>Contado y a crédito</p>
             </div>
 
         </div>
-        <!-- Crédito Final -->
         <div class="footer-credit">
             © 2025 Constructora RADAC. Todos los derechos reservados.
         </div>
     </footer>
 
-    <!-- Botón flotante de WhatsApp -->
     <a href="#" class="whatsapp-float" id="waFloatLink" target="_blank" title="Chatea con nosotros en WhatsApp y descubre novedades y promociones">
         <img src="https://img.icons8.com/color/200/whatsapp--v1.png" alt="WhatsApp" class="whatsapp-icon">
     </a>
 
-    <!-- Bootstrap y AOS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init();
     </script>
 
-    <!------------ MAIN ------------>
     <script>
         const images = [
             'img/Imagen5.jpg',
@@ -339,12 +306,11 @@
         AOS.init();
     </script>
 
-    <!-- Botón flotante de WhatsApp -->
     <script>
         (function() {
             // === CONFIGURA AQUÍ ===
-            // Pon tu número móvil local de 10 dígitos (sin espacios). EJEMPLO: "2461801208"
-            const LOCAL_NUMBER = "2461801208"; // <-- AJÚSTALO (tu mensaje puso 246181208, parece faltar dígitos)
+            // Se ha modificado LOCAL_NUMBER a "2461373113"
+            const LOCAL_NUMBER = "2461373113";
             const COUNTRY_CODE = "52"; // MX
             const MOBILE_PREFIX = "1"; // Requerido para móviles en MX
 
